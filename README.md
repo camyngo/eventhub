@@ -1,6 +1,6 @@
 # EventHub
 
-A full-stack event ticket booking platform where users browse events, book tickets, and manage their bookings.
+A full-stack event ticket booking platform where users browse events, book tickets, and manage their bookings. This project was created following the GenAI instructor course on Udemy.
 
 ## Tech Stack
 
