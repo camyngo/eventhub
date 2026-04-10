@@ -763,6 +763,7 @@
 - Warning banner appears referencing the 9-booking sandbox limit
 - Banner text matches `getByText(/sandbox holds up to/i)` or similar
 **Business Rule**: BR-5 (sandbox warning banners)
+**Known Risk**: Banner not confirmed implemented in current `/bookings` page code — verify existence before automating
 **Suggested Layer**: E2E
 
 ---
@@ -776,6 +777,7 @@
 **Expected Results**:
 - No sandbox warning banner is visible
 **Business Rule**: BR-5 (banner hidden at low counts)
+**Known Risk**: Same as TC-501 — verify banner implementation exists
 **Suggested Layer**: E2E
 
 ---
@@ -893,4 +895,364 @@
 
 ---
 
-*End of booking management test scenarios. Total: 45 scenarios across 6 categories.*
+### TC-510: Bookings list loading state shows skeleton cards
+**Category**: UI State
+**Priority**: P1
+**Preconditions**: User logged in; simulate slow network or fresh page load
+**Steps**:
+1. Navigate to `/bookings` before API response returns
+**Expected Results**:
+- 5 animated skeleton/pulse placeholder cards are shown
+- No actual booking data is visible yet
+- No error message is shown
+**Business Rule**: UX loading feedback
+**Suggested Layer**: E2E (intercept & delay network)
+
+---
+
+### TC-511: Bookings list error state shows retry option
+**Category**: UI State
+**Priority**: P1
+**Preconditions**: User logged in; backend unreachable (simulate network error)
+**Steps**:
+1. Block network requests to `/api/bookings`
+2. Navigate to `/bookings`
+**Expected Results**:
+- Error message: "Couldn't load bookings"
+- Sub-message: "Failed to connect to the server. Please try again."
+- "Retry" button is visible and calls `refetch()` on click
+**Business Rule**: Frontend error boundary pattern
+**Suggested Layer**: E2E (intercept network)
+
+---
+
+### TC-512: Booking detail loading state shows spinner
+**Category**: UI State
+**Priority**: P1
+**Preconditions**: User navigates to `/bookings/:id`; simulate slow response
+**Steps**:
+1. Intercept and delay `GET /api/bookings/:id`
+2. Navigate to `/bookings/:id`
+**Expected Results**:
+- Full-page spinner (`<Spinner size="lg">`) shown during load
+- Booking content does not flash before data arrives
+**Business Rule**: UX loading feedback
+**Suggested Layer**: E2E (intercept & delay network)
+
+---
+
+### TC-513: Booking detail shows "Booking not found" for invalid ID (UI)
+**Category**: UI State
+**Priority**: P1
+**Preconditions**: User logged in
+**Steps**:
+1. Navigate to `/bookings/999999`
+**Expected Results**:
+- Title: "Booking not found"
+- Description: "This booking doesn't exist or may have been cancelled."
+- "View My Bookings" button links back to `/bookings`
+- No booking data shown, no JS error
+**Business Rule**: 404 fallback handling in frontend
+**Suggested Layer**: E2E
+
+---
+
+### TC-514: Booking detail "Access Denied" UI — correct wording
+**Category**: UI State
+**Priority**: P0
+**Preconditions**: User B is logged in; User A's booking ID known
+**Steps**:
+1. Navigate to `/bookings/:userA_id` as User B
+**Expected Results**:
+- Title: "Access Denied"
+- Description: "You are not authorized to view this booking."
+- "View My Bookings" button visible and navigates to `/bookings`
+- No booking data leaked
+**Business Rule**: BR-2 (cross-user isolation)
+**Suggested Layer**: E2E
+
+---
+
+### TC-515: Cancel booking from detail page shows confirmation modal
+**Category**: UI State
+**Priority**: P1
+**Preconditions**: User on `/bookings/:id`
+**Steps**:
+1. Click "Cancel Booking" button
+**Expected Results**:
+- A confirmation modal/dialog appears before the booking is deleted
+- Modal shows booking reference and quantity to be released
+- Confirm button is present and enabled
+- Dismiss/close button cancels the action without deleting
+**Business Rule**: BR-4 (cancellation frees seats)
+**Suggested Layer**: E2E
+
+---
+
+### TC-516: Cancel booking from detail page — confirm button disabled during in-flight request
+**Category**: UI State
+**Priority**: P2
+**Preconditions**: User on `/bookings/:id`; confirmation modal open
+**Steps**:
+1. Click "Cancel Booking" → modal appears
+2. Click Confirm (intercept DELETE to introduce delay)
+**Expected Results**:
+- Confirm button shows loading indicator and is disabled while request is in flight
+- Dialog does not close prematurely
+**Business Rule**: UX double-submit prevention
+**Suggested Layer**: E2E
+
+---
+
+### TC-517: Cancel booking success — toast shown and redirect to /bookings
+**Category**: UI State
+**Priority**: P1
+**Preconditions**: User on `/bookings/:id`
+**Steps**:
+1. Confirm booking cancellation
+**Expected Results**:
+- Success toast: "Booking cancelled successfully"
+- User is redirected to `/bookings`
+- Cancelled booking no longer appears in list
+**Business Rule**: BR-4 (cancellation flow)
+**Suggested Layer**: E2E
+
+---
+
+### TC-518: Cancel booking API error — toast shown, modal stays open
+**Category**: UI State
+**Priority**: P1
+**Preconditions**: User on `/bookings/:id`; cancel modal open; intercept DELETE to return 500
+**Steps**:
+1. Confirm cancellation
+2. Backend returns error
+**Expected Results**:
+- Error toast appears with the error message
+- Modal remains open (not dismissed)
+- Booking is NOT removed from the list
+- User can retry
+**Business Rule**: Frontend error recovery
+**Suggested Layer**: E2E (intercept network)
+
+---
+
+### TC-519: Cancel booking from booking card on list page
+**Category**: UI State
+**Priority**: P1
+**Preconditions**: User on `/bookings`; at least one booking card visible
+**Steps**:
+1. Click "Cancel Booking" on a `#booking-card`
+2. Confirm in the dialog
+**Expected Results**:
+- Booking is removed from the list after confirmation
+- Seat count for the event is freed
+- Success feedback shown (toast or list refresh)
+**Business Rule**: BR-4 (cancellation from list view)
+**Suggested Layer**: E2E
+
+---
+
+### TC-520: Clear all bookings requires confirmation dialog
+**Category**: UI State
+**Priority**: P1
+**Preconditions**: User has at least 1 booking; on `/bookings`
+**Steps**:
+1. Click "Clear all bookings"
+**Expected Results**:
+- Browser `confirm()` dialog appears: "Clear all your bookings? This cannot be undone."
+- If user clicks Cancel: no bookings are deleted
+- If user clicks OK: all bookings are cleared
+**Business Rule**: BR-4 (Clear All — irreversible)
+**Suggested Layer**: E2E
+
+---
+
+### TC-521: Clear all button shows "Clearing…" and is disabled during request
+**Category**: UI State
+**Priority**: P2
+**Preconditions**: User confirms the clear-all action; intercept DELETE to delay
+**Steps**:
+1. Confirm "Clear all bookings"
+2. Observe button state during the in-flight request
+**Expected Results**:
+- Button label changes to "Clearing…"
+- Button is disabled (no double-click possible)
+**Business Rule**: UX double-submit prevention
+**Suggested Layer**: E2E (intercept network)
+
+---
+
+### TC-522: "Sold Out" button state on event detail page
+**Category**: UI State
+**Priority**: P0
+**Preconditions**: Event with `availableSeats = 0`
+**Steps**:
+1. Navigate to `/events/:id` for that event
+**Expected Results**:
+- "Confirm Booking" button is replaced with or shows "Sold Out"
+- Button is disabled — clicking has no effect
+- No booking is submitted
+**Business Rule**: Seat availability check
+**Suggested Layer**: E2E
+
+---
+
+### TC-523: Increment button capped at min(10, availableSeats)
+**Category**: UI State
+**Priority**: P1
+**Preconditions**: Event with exactly 3 available seats
+**Steps**:
+1. Navigate to `/events/:id` for that event
+2. Click `+` button 3 times (reaching 3)
+3. Click `+` again
+**Expected Results**:
+- `#ticket-count` caps at 3 (the available seat count, not 10)
+- Increment button is disabled at that cap
+**Business Rule**: bookingValidator (quantity ≤ availableSeats)
+**Suggested Layer**: E2E + Component
+
+---
+
+### TC-524: Booking form submit button shows loading state during in-flight request
+**Category**: UI State
+**Priority**: P2
+**Preconditions**: User on `/events/:id`; form filled; intercept POST to delay
+**Steps**:
+1. Fill and submit the booking form
+2. Observe button state during request
+**Expected Results**:
+- "Confirm Booking" button is disabled/loading while request is in flight
+- No duplicate booking created on double-click
+**Business Rule**: UX double-submit prevention
+**Suggested Layer**: E2E
+
+---
+
+### TC-525: Booking submission API error — toast shown, form stays visible
+**Category**: UI State
+**Priority**: P1
+**Preconditions**: Valid booking form; intercept POST `/api/bookings` to return 500
+**Steps**:
+1. Fill all fields and click "Confirm Booking"
+2. Backend returns error
+**Expected Results**:
+- Error toast appears with the error message
+- Booking form remains on screen (no confirmation card)
+- User can correct and retry
+**Business Rule**: Frontend error recovery
+**Suggested Layer**: E2E (intercept network)
+
+---
+
+### TC-526: Inline form validation errors shown for all fields simultaneously
+**Category**: UI State
+**Priority**: P1
+**Preconditions**: User on `/events/:id`
+**Steps**:
+1. Leave Full Name = "A" (1 char), Email = "notanemail", Phone = "123" (3 digits)
+2. Click "Confirm Booking"
+**Expected Results**:
+- Inline error under Name: "Name must be at least 2 chars"
+- Inline error under Email: "Enter a valid email"
+- Inline error under Phone: "Enter a valid 10-digit phone"
+- Form does not submit
+- All 3 errors visible simultaneously
+**Business Rule**: bookingValidator (all fields)
+**Suggested Layer**: E2E + Component
+
+---
+
+### TC-527: Refund result shows green styling for eligible / red for ineligible
+**Category**: UI State
+**Priority**: P2
+**Preconditions**: User on `/bookings/:id`
+**Steps**:
+1. For quantity = 1 booking: click `#check-refund-btn`, wait for result
+2. For quantity > 1 booking: repeat
+**Expected Results**:
+- Quantity 1: green box with checkmark icon + "Eligible for refund. Single-ticket bookings qualify for a full refund."
+- Quantity > 1: red box with X icon + "Not eligible for refund. Group bookings (N tickets) are non-refundable."
+**Business Rule**: BR-8 (refund eligibility UI)
+**Suggested Layer**: E2E
+
+---
+
+### TC-528: FIFO pruning — same-event fallback when all bookings are for same event
+**Category**: Edge Case
+**Priority**: P1
+**Preconditions**: User has 9 bookings all for the same event (Event A)
+**Steps**:
+1. Create a 10th booking for Event A
+**Expected Results**:
+- 10th booking created successfully
+- Oldest booking for Event A is deleted (no other event to fall back to)
+- `availableSeats` for Event A accounts for the pruned booking
+- User has exactly 9 bookings, all for Event A
+**Business Rule**: BR-4 (FIFO same-event fallback in service logic)
+**Suggested Layer**: API
+
+---
+
+### TC-529: Booking ref generation retries on collision; falls back to timestamp
+**Category**: Edge Case
+**Priority**: P3
+**Preconditions**: Stress test scenario — simulate 10 consecutive ref collisions
+**Steps**:
+1. Mock the ref generator to collide 10 times, then succeed on timestamp fallback
+**Expected Results**:
+- Booking is still created successfully
+- Booking ref is unique (timestamp-based fallback format)
+- No 500 error returned to client
+**Business Rule**: BR-7 (collision retry up to 10 attempts, then timestamp fallback)
+**Suggested Layer**: Unit
+
+---
+
+### TC-530: 401 auto-redirect to /login when JWT is missing from localStorage
+**Category**: Security
+**Priority**: P1
+**Preconditions**: User clears `eventhub_token` from localStorage while on `/bookings`
+**Steps**:
+1. Remove `localStorage.getItem('eventhub_token')` via browser DevTools
+2. Trigger any bookings API call (e.g., refresh page)
+**Expected Results**:
+- API client interceptor detects 401 response
+- Token cleared from localStorage
+- User redirected to `/login` automatically
+**Business Rule**: Auth middleware + frontend interceptor
+**Suggested Layer**: E2E
+
+---
+
+### TC-531: Admin bookings page loads booking list with filters
+**Category**: Happy Path
+**Priority**: P2
+**Preconditions**: User logged in; navigate to `/admin/bookings`
+**Steps**:
+1. Navigate to `/admin/bookings`
+2. Change "Status" filter dropdown to "Confirmed"
+**Expected Results**:
+- Booking table loads with columns: Ref, Customer, Event, Qty, Total, Status, Date, Actions
+- Filtering by "Confirmed" shows only confirmed bookings
+- Pagination shown if totalPages > 1
+**Business Rule**: Admin view of user's own bookings
+**Suggested Layer**: E2E
+
+---
+
+### TC-532: Admin bookings — booking detail modal opens on "View"
+**Category**: UI State
+**Priority**: P2
+**Preconditions**: Admin bookings page loaded with at least one booking
+**Steps**:
+1. Click "View" on any booking row
+**Expected Results**:
+- Modal opens showing: ref in title, all booking/event/customer details
+- Modal closes on backdrop click or close button
+- No page navigation occurs
+**Business Rule**: Admin detail view
+**Suggested Layer**: E2E
+
+---
+
+*End of booking management test scenarios. Total: 68 scenarios across 6 categories.*
