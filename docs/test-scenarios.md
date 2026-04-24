@@ -189,7 +189,7 @@
 - `bookingRef` starts with `T-`
 - Remaining 6 characters are alphanumeric
 **Business Rule**: BR-7 (bookingRef first letter = event title first letter)
-**Suggested Layer**: E2E + API
+**Suggested Layer**: Unit + API + E2E
 
 ---
 
@@ -218,7 +218,7 @@
 **Expected Results**:
 - `totalPrice` = 1499 × 3 = 4497
 **Business Rule**: BR-9 (price calculation)
-**Suggested Layer**: API + E2E
+**Suggested Layer**: Unit + API + E2E
 
 ---
 
@@ -294,7 +294,7 @@
 **Expected Results**:
 - Result shows "Group bookings (3 tickets) are non-refundable"
 **Business Rule**: BR-8 (quantity > 1 → non-refundable)
-**Suggested Layer**: E2E
+**Suggested Layer**: Unit + E2E
 
 ---
 
@@ -452,7 +452,7 @@
 **Expected Results**:
 - HTTP 400 Bad Request — quantity must be between 1 and 10
 **Business Rule**: bookingValidator (quantity 1–10)
-**Suggested Layer**: API
+**Suggested Layer**: Unit + API
 
 ---
 
@@ -465,7 +465,7 @@
 **Expected Results**:
 - HTTP 400 Bad Request — quantity must be between 1 and 10
 **Business Rule**: bookingValidator (quantity max = 10)
-**Suggested Layer**: API
+**Suggested Layer**: Unit
 
 ---
 
@@ -478,7 +478,7 @@
 **Expected Results**:
 - HTTP 400 Bad Request with validation error for `customerName`
 **Business Rule**: bookingValidator (customerName required)
-**Suggested Layer**: API
+**Suggested Layer**: Unit
 
 ---
 
@@ -491,7 +491,7 @@
 **Expected Results**:
 - HTTP 400 Bad Request — name minimum 2 characters
 **Business Rule**: bookingValidator (customerName min 2)
-**Suggested Layer**: API
+**Suggested Layer**: Unit
 
 ---
 
@@ -504,7 +504,7 @@
 **Expected Results**:
 - HTTP 400 Bad Request — valid email required
 **Business Rule**: bookingValidator (email format)
-**Suggested Layer**: API
+**Suggested Layer**: Unit
 
 ---
 
@@ -517,7 +517,7 @@
 **Expected Results**:
 - HTTP 400 Bad Request — phone minimum 10 digits
 **Business Rule**: bookingValidator (phone min 10)
-**Suggested Layer**: API
+**Suggested Layer**: Unit
 
 ---
 
@@ -571,7 +571,7 @@
 - Form does not submit
 - Validation error messages displayed inline for each required field
 **Business Rule**: bookingValidator (all fields required)
-**Suggested Layer**: E2E
+**Suggested Layer**: Component
 
 ---
 
@@ -676,7 +676,7 @@
 - Ticket count does not go below 1
 - Decrement button is disabled or has no effect
 **Business Rule**: bookingValidator (quantity min = 1)
-**Suggested Layer**: E2E + Component
+**Suggested Layer**: Component
 
 ---
 
@@ -690,7 +690,7 @@
 - Ticket count does not exceed 10
 - Increment button is disabled or has no effect
 **Business Rule**: bookingValidator (quantity max = 10)
-**Suggested Layer**: E2E + Component
+**Suggested Layer**: Component
 
 ---
 
@@ -718,7 +718,7 @@
 **Expected Results**:
 - Booking created successfully (validator allows +, -, spaces, parentheses)
 **Business Rule**: bookingValidator (phone format)
-**Suggested Layer**: API
+**Suggested Layer**: Unit
 
 ---
 
@@ -749,7 +749,7 @@
 - Empty state message or prompt to browse events is shown
 - "Clear all bookings" link is not visible
 **Business Rule**: BR-4 (bookings list)
-**Suggested Layer**: E2E
+**Suggested Layer**: Component
 
 ---
 
@@ -764,7 +764,7 @@
 - Banner text matches `getByText(/sandbox holds up to/i)` or similar
 **Business Rule**: BR-5 (sandbox warning banners)
 **Known Risk**: Banner not confirmed implemented in current `/bookings` page code — verify existence before automating
-**Suggested Layer**: E2E
+**Suggested Layer**: Component
 
 ---
 
@@ -778,7 +778,7 @@
 - No sandbox warning banner is visible
 **Business Rule**: BR-5 (banner hidden at low counts)
 **Known Risk**: Same as TC-501 — verify banner implementation exists
-**Suggested Layer**: E2E
+**Suggested Layer**: Component
 
 ---
 
@@ -828,7 +828,7 @@
 - `#check-refund-btn` visible
 - Cancel button visible
 **Business Rule**: BR-1 (booking detail view)
-**Suggested Layer**: E2E
+**Suggested Layer**: Component
 
 ---
 
@@ -844,7 +844,7 @@
 - "View My Bookings" and "Browse Events" navigation links are visible
 - No error messages shown
 **Business Rule**: BR-1 (post-booking confirmation)
-**Suggested Layer**: E2E
+**Suggested Layer**: Component
 
 ---
 
@@ -891,7 +891,7 @@
 - `#ticket-count` shows 3 (1 + 3 - 1)
 - Changes are reflected in total price preview if shown
 **Business Rule**: BR-9 (quantity UI controls)
-**Suggested Layer**: E2E + Component
+**Suggested Layer**: Component
 
 ---
 
