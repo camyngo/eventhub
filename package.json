@@ -1,0 +1,12 @@
+{
+  "name": "eventhub",
+  "version": "1.0.0",
+  "description": "EventHub E2E test suite",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:report": "npx playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.59.1"
+  }
+}

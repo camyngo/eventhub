@@ -1,0 +1,723 @@
+- generic [ref=e1]:
+  - link [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+    - text: Skip to main content
+  - banner [ref=e3]:
+    - navigation [ref=e4]:
+      - link [ref=e5] [cursor=pointer]:
+        - /url: /?trk=public_profile_nav-header-logo
+        - generic [ref=e6]: LinkedIn
+        - img [ref=e8]
+      - list [ref=e19]:
+        - listitem [ref=e20]:
+          - link [ref=e21] [cursor=pointer]:
+            - /url: https://www.linkedin.com/top-content?trk=public_profile_guest_nav_menu_topContent
+            - img [ref=e23]
+            - generic [ref=e25]: Top Content
+        - listitem [ref=e26]:
+          - link [ref=e27] [cursor=pointer]:
+            - /url: https://in.linkedin.com/pub/dir/+/+?trk=public_profile_guest_nav_menu_people
+            - img [ref=e29]
+            - generic [ref=e31]: People
+        - listitem [ref=e32]:
+          - link [ref=e33] [cursor=pointer]:
+            - /url: https://in.linkedin.com/learning/search?trk=public_profile_guest_nav_menu_learning
+            - img [ref=e35]
+            - generic [ref=e40]: Learning
+        - listitem [ref=e41]:
+          - link [ref=e42] [cursor=pointer]:
+            - /url: https://in.linkedin.com/jobs/jobs-in-everett-wa?trk=public_profile_guest_nav_menu_jobs
+            - img [ref=e44]
+            - generic [ref=e46]: Jobs
+        - listitem [ref=e47]:
+          - link [ref=e48] [cursor=pointer]:
+            - /url: https://www.linkedin.com/games?trk=public_profile_guest_nav_menu_games
+            - img [ref=e50]
+            - generic [ref=e52]: Games
+      - generic [ref=e53]:
+        - link [ref=e54] [cursor=pointer]:
+          - /url: https://www.linkedin.com/login?session_redirect=https%3A%2F%2Fin%2Elinkedin%2Ecom%2Fin%2Fsangeetha-chennimalai-sdet&fromSignIn=true&trk=public_profile_nav-header-signin
+          - text: Sign in
+        - link [ref=e55] [cursor=pointer]:
+          - /url: https://www.linkedin.com/signup/public-profile-join?vieweeVanityName=sangeetha-chennimalai-sdet&session_redirect=https%3A%2F%2Fin.linkedin.com%2Fin%2Fsangeetha-chennimalai-sdet&trk=public_profile_nav-header-join
+          - text: Join now
+  - main [ref=e56]:
+    - generic [ref=e59]:
+      - generic [ref=e60]:
+        - figure [ref=e61]:
+          - img [ref=e64]
+        - generic [ref=e65]:
+          - img [ref=e67]
+          - generic [ref=e68]:
+            - generic [ref=e69]:
+              - button [ref=e70] [cursor=pointer]:
+                - heading [level=1] [ref=e71]: Sangeetha Chennimalai
+              - heading [level=3] [ref=e72]:
+                - generic [ref=e73]:
+                  - text: Chennai, Tamil Nadu, India
+                  - generic [ref=e74]: ·
+                  - button [ref=e75] [cursor=pointer]: Contact Info
+                  - generic [ref=e76]: 46 followers · 46 connections
+              - heading [level=4] [ref=e77]:
+                - generic [ref=e79]:
+                  - generic [ref=e80]:
+                    - img [ref=e81]
+                    - img [ref=e82]
+                    - img [ref=e83]
+                  - button [ref=e84] [cursor=pointer]: See your mutual connections
+              - generic [ref=e85]:
+                - link [ref=e86] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/signup/public-profile-join?vieweeVanityName=sangeetha-chennimalai-sdet&trk=public_profile_top-card-primary-button-join-to-view-profile
+                  - text: Join to view profile
+                - button [ref=e88] [cursor=pointer]:
+                  - img [ref=e90]
+                  - text: Message
+            - generic [ref=e93]:
+              - link [ref=e95] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/verizon?trk=public_profile_topcard-current-company
+                - img [ref=e96]
+                - generic [ref=e97]: Verizon
+              - generic [ref=e99]:
+                - img [ref=e100]
+                - generic [ref=e101]: KSR College of Engineering
+          - button [ref=e104] [cursor=pointer]:
+            - img [ref=e106]
+      - generic [ref=e108]:
+        - heading [level=2] [ref=e109]: About
+        - generic [ref=e111]:
+          - text: Dynamic SDET with 11 years of experience across Banking, Healthcare, and…
+          - button [ref=e113] [cursor=pointer]:
+            - generic [ref=e114]: see more
+      - generic [ref=e115]:
+        - heading [level=2] [ref=e116]: Activity
+        - heading [level=3] [ref=e117]: 46 followers
+        - generic [ref=e118]:
+          - generic [ref=e119]:
+            - tablist [ref=e120]:
+              - tab [selected] [ref=e121] [cursor=pointer]: Comments
+              - tab [ref=e122] [cursor=pointer]: Reactions
+            - tabpanel [ref=e123]:
+              - generic [ref=e124]:
+                - generic [ref=e125]:
+                  - generic [ref=e126]: Sangeetha Chennimalai commented on a post · 8mo
+                  - generic [ref=e127]: Thoughtful one! As AI becomes a coding partner, we need recruitment processes that test how well candidates leverage these tools, not just hand-code. Those who know how to ‘prompt engineer’ are the engineers of the future. Thanks for sharing Mathi 👏
+                  - link [ref=e128] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/posts/mathivanan-p_coding-interviews-in-the-gen-ai-era-adapting-activity-7357468818090184704-ltDC
+                - generic [ref=e129]:
+                  - generic [ref=e130]: Sangeetha Chennimalai commented on a post · 10mo
+                  - generic [ref=e131]: I'm interested
+                  - link [ref=e132] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/posts/swapnil-makne-05061998ms_jobopenings-testing-qualityanalyst-activity-7332319582289842177-5elP
+            - text: · · · · · · ·
+          - link [ref=e133] [cursor=pointer]:
+            - /url: https://www.linkedin.com/signup/cold-join?session_redirect=https%3A%2F%2Fin%2Elinkedin%2Ecom%2Fin%2Fsangeetha-chennimalai-sdet%2Frecent-activity%2F&trk=public_profile
+            - text: See all activities
+      - generic [ref=e134]:
+        - heading [level=2] [ref=e135]: Experience & Education
+        - generic [ref=e137]:
+          - list [ref=e138]:
+            - listitem [ref=e139]:
+              - generic [ref=e140]:
+                - heading [level=3] [ref=e141]: Verizon
+                - heading [level=4] [ref=e142]:
+                  - paragraph [ref=e143]: "**** ****"
+          - list [ref=e145]:
+            - listitem [ref=e146]:
+              - generic [ref=e147]:
+                - heading [level=3] [ref=e148]: "******* ******* **********"
+                - heading [level=4] [ref=e149]:
+                  - paragraph [ref=e150]: "********** ******* *******"
+            - listitem [ref=e151]:
+              - generic [ref=e152]:
+                - heading [level=3] [ref=e153]: "*********"
+                - heading [level=4] [ref=e154]:
+                  - paragraph [ref=e155]: "*********"
+            - listitem [ref=e156]:
+              - generic [ref=e157]:
+                - heading [level=3] [ref=e158]: "*** ******* ** ***********"
+                - heading [level=4] [ref=e159]:
+                  - paragraph [ref=e160]: "******** ** *********** **** *********** *** ************** *********** undefined"
+                - paragraph [ref=e162]:
+                  - generic [ref=e163]:
+                    - time [ref=e164]: "2004"
+                    - text: "-"
+                    - time [ref=e165]: "2008"
+            - listitem [ref=e166]:
+              - generic [ref=e167]:
+                - heading [level=3] [ref=e168]: "***** ****** ********* ******"
+                - heading [level=4] [ref=e169]:
+                  - paragraph [ref=e170]: "**** ****** ******** *******"
+                - paragraph [ref=e172]:
+                  - generic [ref=e173]:
+                    - time [ref=e174]: "2003"
+                    - text: "-"
+                    - time [ref=e175]: "2004"
+          - generic [ref=e176]:
+            - heading [level=2] [ref=e177]: View Sangeetha’s full experience
+            - heading [level=3] [ref=e178]: See their title, tenure and more.
+            - generic [ref=e179]:
+              - button [ref=e181] [cursor=pointer]:
+                - generic [ref=e182]: Sign in
+              - paragraph [ref=e184]: or
+              - generic [ref=e185]:
+                - paragraph [ref=e186]:
+                  - text: By clicking Continue to join or sign in, you agree to LinkedIn’s
+                  - link [ref=e187] [cursor=pointer]:
+                    - /url: /legal/user-agreement?trk=public_profile_auth-button_user-agreement
+                    - text: User Agreement
+                  - text: ","
+                  - link [ref=e188] [cursor=pointer]:
+                    - /url: /legal/privacy-policy?trk=public_profile_auth-button_privacy-policy
+                    - text: Privacy Policy
+                  - text: ", and"
+                  - link [ref=e189] [cursor=pointer]:
+                    - /url: /legal/cookie-policy?trk=public_profile_auth-button_cookie-policy
+                    - text: Cookie Policy
+                  - text: .
+                - button [ref=e190]:
+                  - button [ref=e193] [cursor=pointer]:
+                    - generic [ref=e195]:
+                      - img [ref=e197]
+                      - generic [ref=e204]: Continue with Google
+      - generic [ref=e205]:
+        - heading [level=2] [ref=e206]: Licenses & Certifications
+        - list [ref=e208]:
+          - listitem [ref=e209]:
+            - link [ref=e210] [cursor=pointer]:
+              - /url: https://in.linkedin.com/company/testleaf?trk=public_profile_profile-section-card_image-click
+              - img [ref=e211]
+            - generic [ref=e212]:
+              - heading [level=3] [ref=e213]: Rest API Automation Testing
+              - heading [level=4] [ref=e214]:
+                - link [ref=e215] [cursor=pointer]:
+                  - /url: https://in.linkedin.com/company/testleaf?trk=public_profile_profile-section-card_subtitle-click
+                  - text: TestLeaf Software Solutions Private Limited
+              - generic [ref=e218]:
+                - text: Issued
+                - time [ref=e219]: Jan 2023
+          - listitem [ref=e220]:
+            - link [ref=e221] [cursor=pointer]:
+              - /url: https://in.linkedin.com/company/testleaf?trk=public_profile_profile-section-card_image-click
+              - img [ref=e222]
+            - generic [ref=e223]:
+              - heading [level=3] [ref=e224]: Selenium
+              - heading [level=4] [ref=e225]:
+                - link [ref=e226] [cursor=pointer]:
+                  - /url: https://in.linkedin.com/company/testleaf?trk=public_profile_profile-section-card_subtitle-click
+                  - text: TestLeaf Software Solutions Private Limited
+              - generic [ref=e229]:
+                - text: Issued
+                - time [ref=e230]: Dec 2021
+          - listitem [ref=e231]:
+            - link [ref=e232] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/sun-microsystems_1062?trk=public_profile_profile-section-card_image-click
+              - img [ref=e233]
+            - generic [ref=e234]:
+              - heading [level=3] [ref=e235]: Sun Certified Enterprise Architect for Java 2EE (SCEA)
+              - heading [level=4] [ref=e236]:
+                - link [ref=e237] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/company/sun-microsystems_1062?trk=public_profile_profile-section-card_subtitle-click
+                  - text: Sun Microsystems
+              - generic [ref=e240]:
+                - text: Issued
+                - time [ref=e241]: Dec 2009
+          - listitem [ref=e242]:
+            - link [ref=e243] [cursor=pointer]:
+              - /url: https://in.linkedin.com/company/testleaf?trk=public_profile_profile-section-card_image-click
+              - img [ref=e244]
+            - generic [ref=e245]:
+              - heading [level=3] [ref=e246]: Playwright using Typescript
+              - heading [level=4] [ref=e247]:
+                - link [ref=e248] [cursor=pointer]:
+                  - /url: https://in.linkedin.com/company/testleaf?trk=public_profile_profile-section-card_subtitle-click
+                  - text: Testleaf Software Solutions Private Limited
+              - generic [ref=e250]:
+                - generic [ref=e251]:
+                  - text: Issued
+                  - time [ref=e252]: Dec 2025
+                - generic [ref=e253]:
+                  - text: · Expires
+                  - time [ref=e254]: Dec 2035
+          - listitem [ref=e255]:
+            - link [ref=e256] [cursor=pointer]:
+              - /url: https://in.linkedin.com/company/testleaf?trk=public_profile_profile-section-card_image-click
+              - img [ref=e257]
+            - generic [ref=e258]:
+              - heading [level=3] [ref=e259]: Generative AI for QA Engineers
+              - heading [level=4] [ref=e260]:
+                - link [ref=e261] [cursor=pointer]:
+                  - /url: https://in.linkedin.com/company/testleaf?trk=public_profile_profile-section-card_subtitle-click
+                  - text: Testleaf Software Solutions Private Limited
+              - generic [ref=e263]:
+                - generic [ref=e264]:
+                  - text: Issued
+                  - time [ref=e265]: Jan 2025
+                - generic [ref=e266]:
+                  - text: · Expires
+                  - time [ref=e267]: Mar 2025
+      - generic [ref=e268]:
+        - heading [level=2] [ref=e269]: Volunteer Experience
+        - list [ref=e271]:
+          - listitem [ref=e272]:
+            - link [ref=e273] [cursor=pointer]:
+              - /url: https://ie.linkedin.com/company/crew-creative-digital-enterprise?trk=public_profile_volunteering-position_profile-section-card_image-click
+              - img [ref=e274]
+            - generic [ref=e275]:
+              - heading [level=3] [ref=e276]: Social Worker
+              - heading [level=4] [ref=e277]:
+                - link [ref=e278] [cursor=pointer]:
+                  - /url: https://ie.linkedin.com/company/crew-creative-digital-enterprise?trk=public_profile_volunteering-position_profile-section-card_subtitle-click
+                  - text: CREW
+              - generic [ref=e279]:
+                - paragraph [ref=e280]:
+                  - generic [ref=e281]:
+                    - time [ref=e282]: Jan 2012
+                    - text: "- Present ·14 years 4 months"
+                - paragraph [ref=e283]: Social Services
+                - paragraph [ref=e285]: We spend time with grandparents in old age home and also with the kids in orphanages. We provide food on week ends and also on special occasions. We do provide help for their daily needs and also assist bright kids with our education aid program.
+      - generic [ref=e286]:
+        - heading [level=2] [ref=e287]: Courses
+        - list [ref=e289]:
+          - listitem [ref=e290]:
+            - generic [ref=e291]:
+              - heading [level=3] [ref=e292]: Java
+              - heading [level=4] [ref=e293]: "1"
+          - listitem [ref=e294]:
+            - generic [ref=e295]:
+              - heading [level=3] [ref=e296]: Rest API Automation
+              - heading [level=4] [ref=e297]: "3"
+          - listitem [ref=e298]:
+            - generic [ref=e299]:
+              - heading [level=3] [ref=e300]: Selenium
+              - heading [level=4] [ref=e301]: "2"
+      - generic [ref=e302]:
+        - heading [level=2] [ref=e303]: Projects
+        - list [ref=e305]:
+          - listitem [ref=e306]:
+            - generic [ref=e307]:
+              - heading [level=3] [ref=e308]: User and Account - HPE RnD
+              - heading [level=4] [ref=e309]:
+                - generic [ref=e310]:
+                  - time [ref=e311]: Jun 2022
+                  - text: "-"
+                  - time [ref=e312]: Sep 2023
+              - generic [ref=e313]:
+                - paragraph [ref=e315]:
+                  - text: The project Identity User and Account in HPE Rnd division manages all the users and contact information of the HPE customers.• Understand the requirements, presenting the same to PO/PM, clarify the doubts and Estimate and arrive at the story points for both development and Testing during Feature Grooming. • Enumerate test data and execute test cases for the user stories in all the environments. • Responsible for automation test case preparation and End to End testing of our…
+                  - button [ref=e316] [cursor=pointer]: Show more
+                - generic [ref=e318]: Other creators
+                - list [ref=e319]:
+                  - listitem [ref=e320]:
+                    - link [ref=e321] [cursor=pointer]:
+                      - /url: https://in.linkedin.com/in/swathi-b-36042933?trk=public_profile_project_contributor-image
+                      - img [ref=e322]
+          - listitem [ref=e323]:
+            - generic [ref=e324]:
+              - heading [level=3] [ref=e325]: Aetna - CTS
+              - heading [level=4] [ref=e326]:
+                - generic [ref=e327]:
+                  - time [ref=e328]: May 2013
+                  - text: "-"
+                  - time [ref=e329]: Jul 2018
+              - paragraph [ref=e332]:
+                - text: • Analyze the requirements and estimate the efforts during the refinement session • Enumerate test data and execute the test cases with Hybrid Framework • Responsible for automation test case preparation - both in-sprint and regression test cases • Supported Framework team to build functions specific to dynamic handling of objects. • Responsible for End-to-End testing in all the environments • Provide demo to Client Lead/Manager and Product Owner • Conduct training sessions…
+                - button [ref=e333] [cursor=pointer]: Show more
+          - listitem [ref=e335]:
+            - generic [ref=e336]:
+              - heading [level=3] [ref=e337]: USAA - HCL
+              - heading [level=4] [ref=e338]:
+                - generic [ref=e339]:
+                  - time [ref=e340]: Jan 2010
+                  - text: "-"
+                  - time [ref=e341]: Apr 2013
+              - paragraph [ref=e344]: • Design, Development and refactoring of Adjusted Web services • Prepared J-unit test cases for the refactored services and new Web Services • Performing Defect analysis and defect fixing • Involved in Interaction with IBM for resolving some integration issues
+      - generic [ref=e345]:
+        - heading [level=2] [ref=e346]: Honors & Awards
+        - list [ref=e348]:
+          - listitem [ref=e349]:
+            - generic [ref=e350]:
+              - heading [level=3] [ref=e351]: Spot Light Award
+              - heading [level=4] [ref=e352]: TEK Systems
+              - generic [ref=e353]:
+                - time [ref=e355]: Aug 2023
+                - paragraph [ref=e357]: Received 'Spot Light Award' in recognition of the best performance in delivering the quality product with zero defects.
+          - listitem [ref=e358]:
+            - generic [ref=e359]:
+              - heading [level=3] [ref=e360]: Guiding Mentor
+              - heading [level=4] [ref=e361]: Cognizant
+              - generic [ref=e362]:
+                - time [ref=e364]: Aug 2017
+                - paragraph [ref=e366]: Awarded as 'Guiding Mentor' for mentoring new joiners in my team. Have learnt Selenium on my own and moved to automation testing. Have taken internal trainings on Java and Selenium for the freshers and also for the resources who are new to coding.
+          - listitem [ref=e367]:
+            - generic [ref=e368]:
+              - heading [level=3] [ref=e369]: Best Team Award
+              - heading [level=4] [ref=e370]: Cognizant
+              - generic [ref=e371]:
+                - time [ref=e373]: May 2016
+                - paragraph [ref=e375]: Received 'Best Team Award' for having excellent coordination with both the development and testing team, thereby achieving the zero defect on time project deliverables.
+          - listitem [ref=e376]:
+            - generic [ref=e377]:
+              - heading [level=3] [ref=e378]: Associate of the Quarter
+              - heading [level=4] [ref=e379]: Cognizant
+              - generic [ref=e380]:
+                - time [ref=e382]: Mar 2014
+                - paragraph [ref=e384]: Awarded with 'Associate of the Quarter' for contributing innovative ideas and also for implementing the same using Android mobile application in the Hackathon event conducted.
+          - listitem [ref=e385]:
+            - generic [ref=e386]:
+              - heading [level=3] [ref=e387]: Live Wire Award
+              - heading [level=4] [ref=e388]: HCL
+              - generic [ref=e389]:
+                - time [ref=e391]: Jan 2012
+                - paragraph [ref=e393]: Got 'Live Wire Award' from USAA client for refactoring the existing webservices as reusable one single handedly.
+      - generic [ref=e394]:
+        - heading [level=2] [ref=e395]: Languages
+        - list [ref=e397]:
+          - listitem [ref=e398]:
+            - generic [ref=e399]:
+              - heading [level=3] [ref=e400]: Tamil
+              - heading [level=4] [ref=e401]: "-"
+          - listitem [ref=e402]:
+            - generic [ref=e403]:
+              - heading [level=3] [ref=e404]: English
+              - heading [level=4] [ref=e405]: "-"
+      - generic [ref=e408]:
+        - heading [level=2] [ref=e409]: View Sangeetha’s full profile
+        - list [ref=e410]:
+          - listitem [ref=e411]:
+            - generic [ref=e414]: See who you know in common
+          - listitem [ref=e415]:
+            - generic [ref=e418]: Get introduced
+          - listitem [ref=e419]:
+            - generic [ref=e422]: Contact Sangeetha directly
+        - link [ref=e423] [cursor=pointer]:
+          - /url: https://www.linkedin.com/signup/public-profile-join?vieweeVanityName=sangeetha-chennimalai-sdet&trk=public_profile_bottom-cta-banner
+          - text: Join to view full profile
+    - generic [ref=e424]:
+      - generic [ref=e425]:
+        - heading [level=2] [ref=e426]: Other similar profiles
+        - generic [ref=e428]:
+          - list [ref=e429]:
+            - listitem [ref=e430]:
+              - generic [ref=e431]:
+                - link [ref=e432] [cursor=pointer]:
+                  - /url: https://in.linkedin.com/in/amit-rai-75730679
+                  - generic [ref=e433]: Amit Rai
+                - img [ref=e434]
+                - generic [ref=e435]:
+                  - heading [level=3] [ref=e436]: Amit Rai
+                  - paragraph [ref=e437]: TELUS International India
+                  - generic [ref=e438]:
+                    - generic [ref=e439]: 11K followers
+                    - generic [ref=e440]: Noida
+                  - link [ref=e442] [cursor=pointer]:
+                    - /url: https://in.linkedin.com/in/amit-rai-75730679?trk=public_profile_browsemap_browse-map_connect-button
+                    - text: View Profile
+            - listitem [ref=e443]:
+              - generic [ref=e444]:
+                - link [ref=e445] [cursor=pointer]:
+                  - /url: https://in.linkedin.com/in/durgesh-bahule-29982656
+                  - generic [ref=e446]: Durgesh Bahule
+                - img [ref=e447]
+                - generic [ref=e448]:
+                  - heading [level=3] [ref=e449]: Durgesh Bahule
+                  - paragraph [ref=e450]: YASH Technologies
+                  - generic [ref=e451]:
+                    - generic [ref=e452]: 11K followers
+                    - generic [ref=e453]: Indore
+                  - link [ref=e455] [cursor=pointer]:
+                    - /url: https://in.linkedin.com/in/durgesh-bahule-29982656?trk=public_profile_browsemap_browse-map_connect-button
+                    - text: View Profile
+            - listitem [ref=e456]:
+              - generic [ref=e457]:
+                - link [ref=e458] [cursor=pointer]:
+                  - /url: https://in.linkedin.com/in/kalanidhi-c-07b69035
+                  - generic [ref=e459]: Kalanidhi C
+                - img [ref=e460]
+                - generic [ref=e461]:
+                  - heading [level=3] [ref=e462]: Kalanidhi C
+                  - paragraph [ref=e463]: Sadlapalli Internet Centre
+                  - generic [ref=e464]:
+                    - generic [ref=e465]: 5K followers
+                    - generic [ref=e466]: Andhra Pradesh, India
+                  - link [ref=e468] [cursor=pointer]:
+                    - /url: https://in.linkedin.com/in/kalanidhi-c-07b69035?trk=public_profile_browsemap_browse-map_connect-button
+                    - text: View Profile
+            - listitem [ref=e469]:
+              - generic [ref=e470]:
+                - link [ref=e471] [cursor=pointer]:
+                  - /url: https://in.linkedin.com/in/vinod-bokare-01209370
+                  - generic [ref=e472]: Vinod Bokare
+                - img [ref=e473]
+                - generic [ref=e474]:
+                  - heading [level=3] [ref=e475]: Vinod Bokare
+                  - paragraph [ref=e476]: Morningstar
+                  - generic [ref=e477]:
+                    - generic [ref=e478]: 17K followers
+                    - generic [ref=e479]: Navi Mumbai
+                  - link [ref=e481] [cursor=pointer]:
+                    - /url: https://in.linkedin.com/in/vinod-bokare-01209370?trk=public_profile_browsemap_browse-map_connect-button
+                    - text: View Profile
+            - listitem [ref=e482]:
+              - generic [ref=e483]:
+                - link [ref=e484] [cursor=pointer]:
+                  - /url: https://ca.linkedin.com/in/rohit-singh-7073b954
+                  - generic [ref=e485]: Rohit Singh
+                - generic [ref=e486]:
+                  - heading [level=3] [ref=e487]: Rohit Singh
+                  - paragraph [ref=e488]: HCL Canada Inc.
+                  - generic [ref=e489]:
+                    - generic [ref=e490]: 6K followers
+                    - generic [ref=e491]: Mississauga, ON
+                  - link [ref=e493] [cursor=pointer]:
+                    - /url: https://ca.linkedin.com/in/rohit-singh-7073b954?trk=public_profile_browsemap_browse-map_connect-button
+                    - text: View Profile
+            - listitem [ref=e494]:
+              - generic [ref=e495]:
+                - link [ref=e496] [cursor=pointer]:
+                  - /url: https://in.linkedin.com/in/sukanyakalidoss
+                  - generic [ref=e497]: Sukanya Kalidoss
+                - generic [ref=e498]:
+                  - heading [level=3] [ref=e499]: Sukanya Kalidoss
+                  - paragraph [ref=e500]: KPIT
+                  - generic [ref=e501]:
+                    - generic [ref=e502]: 8K followers
+                    - generic [ref=e503]: Bengaluru
+                  - link [ref=e505] [cursor=pointer]:
+                    - /url: https://in.linkedin.com/in/sukanyakalidoss?trk=public_profile_browsemap_browse-map_connect-button
+                    - text: View Profile
+            - listitem [ref=e506]:
+              - generic [ref=e507]:
+                - link [ref=e508] [cursor=pointer]:
+                  - /url: https://in.linkedin.com/in/rustam-kumar-36856a62
+                  - generic [ref=e509]: Rustam Kumar
+                - generic [ref=e510]:
+                  - heading [level=3] [ref=e511]: Rustam Kumar
+                  - paragraph [ref=e512]: Wipro
+                  - generic [ref=e513]:
+                    - generic [ref=e514]: 10K followers
+                    - generic [ref=e515]: Kolkata
+                  - link [ref=e517] [cursor=pointer]:
+                    - /url: https://in.linkedin.com/in/rustam-kumar-36856a62?trk=public_profile_browsemap_browse-map_connect-button
+                    - text: View Profile
+            - listitem [ref=e518]:
+              - generic [ref=e519]:
+                - link [ref=e520] [cursor=pointer]:
+                  - /url: https://in.linkedin.com/in/roshni-setiya-353b1b6b
+                  - generic [ref=e521]: Roshni Setiya
+                - generic [ref=e522]:
+                  - heading [level=3] [ref=e523]: Roshni Setiya
+                  - paragraph [ref=e524]: Sincro, an Ansira company
+                  - generic [ref=e525]:
+                    - generic [ref=e526]: 7K followers
+                    - generic [ref=e527]: Pune
+                  - link [ref=e529] [cursor=pointer]:
+                    - /url: https://in.linkedin.com/in/roshni-setiya-353b1b6b?trk=public_profile_browsemap_browse-map_connect-button
+                    - text: View Profile
+            - listitem [ref=e530]:
+              - generic [ref=e531]:
+                - link [ref=e532] [cursor=pointer]:
+                  - /url: https://in.linkedin.com/in/deepak-shrivastava-89661919
+                  - generic [ref=e533]: Deepak Shrivastava
+                - generic [ref=e534]:
+                  - heading [level=3] [ref=e535]: Deepak Shrivastava
+                  - paragraph [ref=e536]: Iris Software Inc.
+                  - generic [ref=e537]:
+                    - generic [ref=e538]: 3K followers
+                    - generic [ref=e539]: India
+                  - link [ref=e541] [cursor=pointer]:
+                    - /url: https://in.linkedin.com/in/deepak-shrivastava-89661919?trk=public_profile_browsemap_browse-map_connect-button
+                    - text: View Profile
+            - listitem [ref=e542]:
+              - generic [ref=e543]:
+                - link [ref=e544] [cursor=pointer]:
+                  - /url: https://in.linkedin.com/in/aloksah00
+                  - generic [ref=e545]: Alok Ranjan Sahoo
+                - generic [ref=e546]:
+                  - heading [level=3] [ref=e547]: Alok Ranjan Sahoo
+                  - paragraph [ref=e548]: Applied Materials
+                  - generic [ref=e549]:
+                    - generic [ref=e550]: 25K followers
+                    - generic [ref=e551]: Bengaluru
+                  - link [ref=e553] [cursor=pointer]:
+                    - /url: https://in.linkedin.com/in/aloksah00?trk=public_profile_browsemap_browse-map_connect-button
+                    - text: View Profile
+          - button [ref=e554] [cursor=pointer]: Show more profiles
+      - generic [ref=e556]:
+        - heading [level=2] [ref=e557]: Explore more posts
+        - generic [ref=e559]:
+          - list [ref=e560]:
+            - listitem [ref=e561]:
+              - generic [ref=e562]:
+                - link [ref=e563] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/company/joblanderz-vip?trk=public_profile_relatedPosts_face-pile-cta
+                  - generic [ref=e565]:
+                    - paragraph [ref=e566]: JobLanderz.VIP
+                    - paragraph [ref=e567]: 1K followers
+                - link [ref=e568] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/posts/joblanderz-vip_qatesting-automationqa-techcareertips-activity-7331932969244213249-lejP?trk=public_profile_relatedPosts
+                  - generic [ref=e569]:
+                    - paragraph [ref=e570]: "QA Engineers: How to Win the Job Competition Easily Without Being Boxed into Manual-Only Work! Manual testing alone won’t cut it today. 🚀 Automation is your career rocket. Hiring teams expect testers who automate smartly. Stuck in manual? You risk being overlooked. The key is showing you can scale testing. 📉 Listing only manual skills limits your value. 📉 Recruiters want speed and precision combined. 📉 No automation = no progress in QA roles. 💡 Learn one automation tool deeply: Selenium, Cypress, or Playwright. 💡 Showcase scripts that catch real bugs fast. 💡 Share your process improvements in testing cycles. 🛠 Add your automation projects to GitHub or portfolios. 🛠 Highlight collaboration with dev teams for CI/CD integration. 🛠 Show metrics like reduced test cycles or defect leakage. Your future as a QA Engineer is in automation mastery, not just manual grind. 🔥 Follow JobLanderz.VIP for bite-sized job search strategies that work! #QATesting #AutomationQA #TechCareerTips #TestAutomation #JobSearchHacks Comment \"🤖Automate\" if you want a free QA automation starter guide & resume examples!"
+                    - generic [ref=e573]: 1 Comment
+            - listitem [ref=e574]:
+              - generic [ref=e575]:
+                - link [ref=e576] [cursor=pointer]:
+                  - /url: https://in.linkedin.com/in/saksham-sharma-242710256?trk=public_profile_relatedPosts_face-pile-cta
+                  - generic [ref=e578]:
+                    - paragraph [ref=e579]: Saksham Sharma
+                    - paragraph [ref=e580]: SQE Labs Inc. • 40K followers
+                - link [ref=e581] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/posts/saksham-sharma-242710256_interview-qaterms-software-activity-7342342513577312258-TkDi?trk=public_profile_relatedPosts
+                  - generic [ref=e582]:
+                    - paragraph [ref=e583]: "30+ Terms Every QA Professional Must Know Mastering these terms helps you test better, communicate smarter, and think like a true Quality Engineer 1. Test Scenario - High-level documentation of what to test 2. Test Case - Step-by-step instructions for executing a test 3. Test Suite - A collection of test cases grouped by functionality 4. Test Data - Input data used to execute test cases 5. Test Plan - A strategic document defining test scope, approach, and schedule 6. Requirement Traceability Matrix (RTM) - Maps test cases to requirements 7. Functional Testing - Tests the functionality of the software 8. Non-Functional Testing - Tests performance, usability, scalability, etc. 9. Exploratory Testing - Simultaneous learning, test design, and execution 10. Smoke Testing - Basic tests to verify build stability 11. Sanity Testing - Focused testing to verify bug fixes 12. Regression Testing - Ensuring new code changes don't break existing features 13. Retesting - Testing a bug again after it has been fixed 14. Defect Life Cycle - The stages a bug goes through from discovery to closure 15. Severity - Impact of the bug on functionality 16. Priority - Urgency of fixing the bug 17. Boundary Value Analysis (BVA) - Testing at the boundaries of input ranges 18. Equivalence Partitioning - Dividing input into valid and invalid data sets 19. UAT (User Acceptance Testing) - Performed by end-users to validate requirements 20. QA (Quality Assurance) - Process-focused; ensures quality from the start 21. QC (Quality Control) - Product-focused; finds defects in the final output 22. Bug Leakage - Bugs missed by QA but found in production 23. Bug Release - Known bugs released intentionally with the product 24. Automation Testing - Scripts/tools to automate test execution 25. CI/CD- Continuous Integration and Continuous Deployment for faster delivery 26. Assertions - Conditions to validate expected vs actual results 27. API Testing - Validating backend functionality using tools like Postman 28. Load Testing - Checking system performance under expected load 29. Stress Testing - Testing system limits under extreme load 30. Integration Testing - Ensuring multiple modules work together 31. End-to-End Testing - Testing the complete user journey 32. Maintainability - Ease of updating test scripts or framework 33. Test Coverage - Measure of how much of the application is tested #Interview #QATerms #Software #AutomationTesting #ManualTesting #TestingLife #SDET #QAEngineer #LearningNeverStops #LinkedInLearning #QAKnowledge #QualityMatters #ProductQuality #TechCommunity"
+                    - generic [ref=e585]:
+                      - generic [ref=e587]: "76"
+                      - generic [ref=e588]: · 2 Comments
+            - listitem [ref=e589]:
+              - generic [ref=e590]:
+                - link [ref=e591] [cursor=pointer]:
+                  - /url: https://in.linkedin.com/company/thetesttribe?trk=public_profile_relatedPosts_face-pile-cta
+                  - generic [ref=e593]:
+                    - paragraph [ref=e594]: The Test Tribe
+                    - paragraph [ref=e595]: 50K followers
+                - link [ref=e596] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/posts/thetesttribe_genai-softwaretesting-loadtesting-activity-7355907512002375680-fm1B?trk=public_profile_relatedPosts
+                  - generic [ref=e597]:
+                    - paragraph [ref=e598]: "GenAI + Load Testing in JMeter. Sounds futuristic? It’s not. It’s happening now—and it starts with how well you, the tester, know your foundations. Join Sandeep Garg as he walks us through how to turn your testing expertise into clear prompts that guide an LLM to script a working load test in JMeter. This isn’t just a GenAI show-and-tell. It’s a grounded, thoughtful walkthrough of: 🔹 How load testing knowledge feeds good prompt design 🔹 How LLMs really respond to well-structured inputs 🔹 How to analyze and refine what you generate If you’ve been waiting for a real use case of LLMs in testing—this is the one. 🗓 21st August 2025 🕣 8:30 PM – 10 PM IST 🎤 With: Sandeep Garg, Principal QA Architect at Bridgetree 🔗 Register here: http://tiny.cc/pjfq001 #GenAI #SoftwareTesting #LoadTesting #ApacheJMeter #TheTestTribe #Webinar #LLMs"
+                    - generic [ref=e600]:
+                      - generic [ref=e602]: "23"
+                      - generic [ref=e603]: · 4 Comments
+                  - img [ref=e605]
+            - listitem [ref=e606]:
+              - generic [ref=e607]:
+                - link [ref=e608] [cursor=pointer]:
+                  - /url: https://sa.linkedin.com/in/attique-qayyum-6539a075?trk=public_profile_relatedPosts_face-pile-cta
+                  - generic [ref=e610]:
+                    - paragraph [ref=e611]: Attique Qayyum
+                    - paragraph [ref=e612]: Citiscape LLC • 24K followers
+                - link [ref=e613] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/posts/attique-qayyum-6539a075_stable-build-release-dont-happen-overnight-activity-7371884418946379776-ka3x?trk=public_profile_relatedPosts
+                  - generic [ref=e614]:
+                    - paragraph [ref=e615]: Stable build release don't happen overnight - They happen because of Testers. Developers sleep peacefully after a release, QA testers stay up late ensuring everything is stable and bug-free. QA jobs are very critical and important. But still Leaders think QA is an easy job and replaceable.
+                    - generic [ref=e619]: "5"
+                  - img [ref=e621]
+            - text: · ·
+          - button [ref=e622] [cursor=pointer]: Show more posts
+      - generic [ref=e626]:
+        - heading [level=2] [ref=e628]: Explore collaborative articles
+        - paragraph [ref=e629]: We’re unlocking community knowledge in a new way. Experts add insights directly into each article, started with the help of AI.
+        - link [ref=e630] [cursor=pointer]:
+          - /url: https://www.linkedin.com/pulse/topics/home/
+          - text: Explore More
+      - generic [ref=e631]:
+        - heading [level=2] [ref=e632]: Add new skills with these courses
+        - generic [ref=e633]:
+          - list [ref=e634]:
+            - listitem [ref=e635]:
+              - link [ref=e636] [cursor=pointer]:
+                - /url: https://www.linkedin.com/learning/leveraging-postgresql-with-rag?trk=public_profile_recommended-course
+                - generic [ref=e638]: 53m
+                - heading [level=3] [ref=e641]: Leveraging PostgreSQL with RAG
+            - listitem [ref=e642]:
+              - link [ref=e643] [cursor=pointer]:
+                - /url: https://www.linkedin.com/learning/introduction-to-llm-vulnerabilities?trk=public_profile_recommended-course
+                - generic [ref=e645]: 1h 25m
+                - heading [level=3] [ref=e648]: Introduction to LLM Vulnerabilities
+            - listitem [ref=e649]:
+              - link [ref=e650] [cursor=pointer]:
+                - /url: https://www.linkedin.com/learning/llm-evaluations-and-grounding-techniques?trk=public_profile_recommended-course
+                - generic [ref=e652]: 2h 44m
+                - heading [level=3] [ref=e655]: LLM Evaluations and Grounding Techniques
+          - link [ref=e656] [cursor=pointer]:
+            - /url: https://in.linkedin.com/learning/?trk=seo_pp_d_cymbii_more_m015_learning
+            - text: See all courses
+  - contentinfo [ref=e657]:
+    - list [ref=e658]:
+      - listitem [ref=e659]:
+        - generic [ref=e660]: LinkedIn
+        - generic [ref=e662]: © 2026
+      - listitem [ref=e663]:
+        - link [ref=e664] [cursor=pointer]:
+          - /url: https://about.linkedin.com?trk=public_profile_v3_desktop_footer-about
+          - text: About
+      - listitem [ref=e665]:
+        - link [ref=e666] [cursor=pointer]:
+          - /url: https://www.linkedin.com/accessibility?trk=public_profile_v3_desktop_footer-accessibility
+          - text: Accessibility
+      - listitem [ref=e667]:
+        - link [ref=e668] [cursor=pointer]:
+          - /url: https://www.linkedin.com/legal/user-agreement?trk=public_profile_v3_desktop_footer-user-agreement
+          - text: User Agreement
+      - listitem [ref=e669]:
+        - link [ref=e670] [cursor=pointer]:
+          - /url: https://www.linkedin.com/legal/privacy-policy?trk=public_profile_v3_desktop_footer-privacy-policy
+          - text: Privacy Policy
+      - listitem [ref=e671]:
+        - link [ref=e672] [cursor=pointer]:
+          - /url: https://www.linkedin.com/legal/california-privacy-disclosure?trk=public_profile_v3_desktop_footer-california-privacy-rights-act
+          - text: Your California Privacy Choices
+      - listitem [ref=e673]:
+        - link [ref=e674] [cursor=pointer]:
+          - /url: https://www.linkedin.com/legal/cookie-policy?trk=public_profile_v3_desktop_footer-cookie-policy
+          - text: Cookie Policy
+      - listitem [ref=e675]:
+        - link [ref=e676] [cursor=pointer]:
+          - /url: https://www.linkedin.com/legal/copyright-policy?trk=public_profile_v3_desktop_footer-copyright-policy
+          - text: Copyright Policy
+      - listitem [ref=e677]:
+        - link [ref=e678] [cursor=pointer]:
+          - /url: https://brand.linkedin.com/policies?trk=public_profile_v3_desktop_footer-brand-policy
+          - text: Brand Policy
+      - listitem [ref=e679]:
+        - link [ref=e680] [cursor=pointer]:
+          - /url: https://www.linkedin.com/psettings/guest-controls?trk=public_profile_v3_desktop_footer-guest-controls
+          - text: Guest Controls
+      - listitem [ref=e681]:
+        - link [ref=e682] [cursor=pointer]:
+          - /url: https://www.linkedin.com/legal/professional-community-policies?trk=public_profile_v3_desktop_footer-community-guide
+          - text: Community Guidelines
+      - listitem [ref=e683]:
+        - button [ref=e685]: Language
+  - dialog "Browse anonymously, connect when ready" [active] [ref=e688]:
+    - button "Dismiss" [ref=e689] [cursor=pointer]:
+      - img [ref=e691]
+    - generic [ref=e694]:
+      - generic [ref=e695]:
+        - img [ref=e696]
+        - heading "Browse anonymously, connect when ready" [level=2] [ref=e697]
+        - paragraph [ref=e699]:
+          - img [ref=e701]
+          - text: Sangeetha can introduce you to 2 people at Hewlett Packard Enterprise
+      - generic [ref=e703]:
+        - button "Continue with google" [ref=e706]:
+          - generic [ref=e707]:
+            - button "Continue with Google" [ref=e709] [cursor=pointer]:
+              - generic [ref=e711]:
+                - img [ref=e714]
+                - generic [ref=e721]: Continue with Google
+            - iframe
+        - button "Sign in with Email" [ref=e722] [cursor=pointer]:
+          - img [ref=e724]
+          - generic [ref=e726]: Sign in with Email
+        - paragraph [ref=e728]: or
+        - button "Continue with google" [ref=e730]:
+          - generic [ref=e731]:
+            - button "Continue with Google" [ref=e733] [cursor=pointer]:
+              - generic [ref=e735]:
+                - img [ref=e737]
+                - generic [ref=e744]: Continue with Google
+            - iframe
+        - paragraph [ref=e745]:
+          - text: New to LinkedIn?
+          - link "Join now" [ref=e746] [cursor=pointer]:
+            - /url: https://www.linkedin.com/signup/public-profile-join?vieweeVanityName=sangeetha-chennimalai-sdet&trk=public_profile_contextual-sign-in-modal_join-link
+        - paragraph [ref=e747]:
+          - text: By clicking Continue to join or sign in, you agree to LinkedIn’s
+          - link "User Agreement" [ref=e748] [cursor=pointer]:
+            - /url: /legal/user-agreement?trk=linkedin-tc_auth-button_user-agreement
+          - text: ","
+          - link "Privacy Policy" [ref=e749] [cursor=pointer]:
+            - /url: /legal/privacy-policy?trk=linkedin-tc_auth-button_privacy-policy
+          - text: ", and"
+          - link "Cookie Policy" [ref=e750] [cursor=pointer]:
+            - /url: /legal/cookie-policy?trk=linkedin-tc_auth-button_cookie-policy
+          - text: .

@@ -1,0 +1,373 @@
+- generic [active] [ref=e1]:
+  - generic:
+    - generic:
+      - link "Skip to main content" [ref=e2] [cursor=pointer]
+      - link "Accessibility help" [ref=e3] [cursor=pointer]:
+        - /url: https://support.google.com/websearch/answer/181196?hl=en
+      - link "Accessibility feedback" [ref=e4] [cursor=pointer]
+  - generic [ref=e9]:
+    - search [ref=e10]:
+      - generic [ref=e12]:
+        - link "Go to Google Home" [ref=e14] [cursor=pointer]:
+          - /url: https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwjz9ZnZ_fGTAxVJEzQIHc5wC1cQPAgJ
+          - img [ref=e15]
+        - generic [ref=e22]:
+          - generic [ref=e23]:
+            - combobox "Search" [ref=e26]: site:linkedin.com "SDET" "AI" "test automation" "summary" "LLM" site:linkedin.com "SDET" "AI" "test automation" "summary" "LLM"
+            - generic [ref=e27]:
+              - button "Clear" [ref=e29] [cursor=pointer]:
+                - img [ref=e31]
+              - generic [ref=e34]:
+                - button "Search by voice" [ref=e35] [cursor=pointer]:
+                  - img [ref=e36]
+                - button "Search by image" [ref=e38] [cursor=pointer]:
+                  - img [ref=e39]
+          - button "Search" [ref=e41] [cursor=pointer]:
+            - img [ref=e44]
+    - generic [ref=e46]:
+      - button "Settings" [ref=e48] [cursor=pointer]:
+        - img [ref=e51]
+      - generic [ref=e54]:
+        - button "Google apps" [ref=e56] [cursor=pointer]:
+          - img [ref=e57]
+        - link "Sign in" [ref=e61] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/search%3Fq%3Dsite:linkedin.com%2B%2522SDET%2522%2B%2522AI%2522%2B%2522test%2Bautomation%2522%2B%2522summary%2522%2B%2522LLM%2522%26sei%3Dr6HgaZaPGKjP0PEPjPOy4QI&ec=futura_srp_og_si_72236_p
+  - generic [ref=e63]:
+    - navigation [ref=e69]:
+      - generic [ref=e73]:
+        - list [ref=e74]:
+          - listitem [ref=e75]:
+            - link "AI Mode" [ref=e78] [cursor=pointer]:
+              - /url: /search?q=site:linkedin.com+%22SDET%22+%22AI%22+%22test+automation%22+%22summary%22+%22LLM%22&sca_esv=c191c92cef6168fa&udm=50&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpmAsnXCN5UBx17opt8eaTX-kA7ovRmAIYWC70eULDzbp3RguEbc_paqKKXdAJriXd1Gvjqf0fLlxAdAOYI1LvJg9Z1IaN8BND3dbhR32ReniFYGlpaw4bJfgBZCtp9414ZngsQDls7OjSLh9WLajq2HEuYJVI4TFPBlXgh3hH5UUp4EiPLaJfhGVCC65SGt-zsR92Wg&aep=1&ntc=1&sa=X&ved=2ahUKEwjz9ZnZ_fGTAxVJEzQIHc5wC1cQ2J8OegQIDBAE
+              - generic [ref=e81]: AI Mode
+          - listitem [ref=e82]:
+            - link "All" [disabled] [ref=e83]:
+              - generic [ref=e85]: All
+          - listitem [ref=e86]:
+            - link "Videos" [ref=e87] [cursor=pointer]:
+              - /url: /search?sca_esv=c191c92cef6168fa&udm=7&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpmAsnXCN5UBx17opt8eaTX-kA7ovRmAIYWC70eULDzbp3RguEbc_paqKKXdAJriXd1Gvjqf0fLlxAdAOYI1LvJg9Z1IaN8BND3dbhR32ReniFYGlpaw4bJfgBZCtp9414ZngsQDls7OjSLh9WLajq2HEuYJVI4TFPBlXgh3hH5UUp4EiPLaJfhGVCC65SGt-zsR92Wg&q=site:linkedin.com+%22SDET%22+%22AI%22+%22test+automation%22+%22summary%22+%22LLM%22&sa=X&ved=2ahUKEwjz9ZnZ_fGTAxVJEzQIHc5wC1cQtKgLegQIDhAB
+              - generic [ref=e89]: Videos
+          - listitem [ref=e90]:
+            - link "Images" [ref=e91] [cursor=pointer]:
+              - /url: /search?sca_esv=c191c92cef6168fa&udm=2&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpmAsnXCN5UBx17opt8eaTX-kA7ovRmAIYWC70eULDzbp3RguEbc_paqKKXdAJriXd1Gvjqf0fLlxAdAOYI1LvJg9Z1IaN8BND3dbhR32ReniFYGlpaw4bJfgBZCtp9414ZngsQDls7OjSLh9WLajq2HEuYJVI4TFPBlXgh3hH5UUp4EiPLaJfhGVCC65SGt-zsR92Wg&q=site:linkedin.com+%22SDET%22+%22AI%22+%22test+automation%22+%22summary%22+%22LLM%22&sa=X&ved=2ahUKEwjz9ZnZ_fGTAxVJEzQIHc5wC1cQtKgLegQIDxAB
+              - generic [ref=e93]: Images
+          - listitem [ref=e94]:
+            - link "Forums" [ref=e95] [cursor=pointer]:
+              - /url: /search?sca_esv=c191c92cef6168fa&udm=18&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpmAsnXCN5UBx17opt8eaTX-kA7ovRmAIYWC70eULDzbp3RguEbc_paqKKXdAJriXd1Gvjqf0fLlxAdAOYI1LvJg9Z1IaN8BND3dbhR32ReniFYGlpaw4bJfgBZCtp9414ZngsQDls7OjSLh9WLajq2HEuYJVI4TFPBlXgh3hH5UUp4EiPLaJfhGVCC65SGt-zsR92Wg&q=site:linkedin.com+%22SDET%22+%22AI%22+%22test+automation%22+%22summary%22+%22LLM%22&sa=X&ved=2ahUKEwjz9ZnZ_fGTAxVJEzQIHc5wC1cQs6gLegQIEBAB
+              - generic [ref=e97]: Forums
+          - listitem [ref=e98]:
+            - link "News" [ref=e99] [cursor=pointer]:
+              - /url: /search?sca_esv=c191c92cef6168fa&q=site:linkedin.com+%22SDET%22+%22AI%22+%22test+automation%22+%22summary%22+%22LLM%22&tbm=nws&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpmAsnXCN5UBx17opt8eaTX-kA7ovRmAIYWC70eULDzbp3RguEbc_paqKKXdAJriXd1Gvjqf0fLlxAdAOYI1LvJg9Z1IaN8BND3dbhR32ReniFYGlpaw4bJfgBZCtp9414ZngsQDls7OjSLh9WLajq2HEuYJVI4TFPBlXgh3hH5UUp4EiPLaJfhGVCC65SGt-zsR92Wg&sa=X&ved=2ahUKEwjz9ZnZ_fGTAxVJEzQIHc5wC1cQ0pQJegQIERAB
+              - generic [ref=e101]: News
+          - listitem [ref=e102]:
+            - link "Shopping" [ref=e103] [cursor=pointer]:
+              - /url: /search?sca_esv=c191c92cef6168fa&udm=28&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpmAsnXCN5UBx17opt8eaTX-kA7ovRmAIYWC70eULDzbp3RguEbc_paqKKXdAJriXd1Gvjqf0fLlxAdAOYI1LvJg9Z1IaN8BND3dbhR32ReniFYGlpaw4bJfgBZCtp9414ZngsQDls7OjSLh9WLajq2HEuYJVI4TFPBlXgh3hH5UUp4EiPLaJfhGVCC65SGt-zsR92Wg&q=site:linkedin.com+%22SDET%22+%22AI%22+%22test+automation%22+%22summary%22+%22LLM%22&ved=1t:220175&ictx=111
+              - generic [ref=e105]: Shopping
+          - listitem [ref=e106]:
+            - button "More filters" [ref=e107] [cursor=pointer]:
+              - generic "More filters" [ref=e108]:
+                - generic [ref=e109]:
+                  - generic [ref=e110]: More
+                  - img [ref=e112]
+        - button "Tools" [ref=e115] [cursor=pointer]:
+          - generic [ref=e117]:
+            - generic [ref=e118]: Tools
+            - img [ref=e120]
+    - heading "Search Results" [level=1] [ref=e122]
+    - main [ref=e128]:
+      - generic [ref=e132]:
+        - generic [ref=e135]:
+          - heading "Web results" [level=2] [ref=e136]
+          - generic [ref=e137]:
+            - generic [ref=e140]:
+              - 'link "Testing AI Models with Evals: A Guide for SDETs LinkedIn · Harshit Shah 20+ reactions · 1 month ago" [ref=e142] [cursor=pointer]':
+                - /url: https://www.linkedin.com/posts/harshitshah15_sdet-softwaretesting-llmtesting-activity-7436832051854536704-CxNz
+                - 'heading "Testing AI Models with Evals: A Guide for SDETs" [level=3] [ref=e143]'
+                - generic [ref=e148]:
+                  - generic [ref=e150]: LinkedIn · Harshit Shah
+                  - generic [ref=e152]: 20+ reactions · 1 month ago
+              - button "About this result" [ref=e153] [cursor=pointer]:
+                - img [ref=e156]
+            - generic [ref=e159]:
+              - generic [ref=e160]:
+                - text: ...
+                - emphasis [ref=e161]: summary
+                - text: contain the word "revenue growth"? 3️⃣
+                - emphasis [ref=e162]: LLM
+                - text: "... #"
+                - emphasis [ref=e163]: LLM
+                - text: "#"
+                - emphasis [ref=e164]: AI
+                - text: "#Chatbots #PromptEngineering #SoftwareEngineering #DeveloperJourney."
+              - link "Read more" [ref=e165] [cursor=pointer]:
+                - /url: https://www.linkedin.com/posts/harshitshah15_sdet-softwaretesting-llmtesting-activity-7436832051854536704-CxNz#:~:text=%23LLM%20%23AI%20%23Chatbots%20%23PromptEngineering%20%23SoftwareEngineering,%23DeveloperJourney
+        - generic [ref=e169]:
+          - generic [ref=e172]:
+            - link "How LLMs supercharge the SDET role | Ritika Nath posted ... LinkedIn · Ritika Nath 80+ reactions · 9 months ago" [ref=e174] [cursor=pointer]:
+              - /url: https://www.linkedin.com/posts/ritika-nath-337403123_sdet-qa-aitesting-activity-7345460154588385281-OApe
+              - heading "How LLMs supercharge the SDET role | Ritika Nath posted ..." [level=3] [ref=e175]
+              - generic [ref=e180]:
+                - generic [ref=e182]: LinkedIn · Ritika Nath
+                - generic [ref=e184]: 80+ reactions · 9 months ago
+            - button "About this result" [ref=e185] [cursor=pointer]:
+              - img [ref=e188]
+          - generic [ref=e191]:
+            - generic [ref=e192]:
+              - text: "#"
+              - emphasis [ref=e193]: SDET
+              - text: "#QA #AITesting #"
+              - emphasis [ref=e194]: LLM
+              - text: "#ChatGPT #CypressIO #Playwright ... I'm passionate about leveraging"
+              - emphasis [ref=e195]: AI
+              - text: in
+              - emphasis [ref=e196]: Test Automation
+              - text: to enhance ...
+            - link "Read more" [ref=e197] [cursor=pointer]:
+              - /url: https://www.linkedin.com/posts/ritika-nath-337403123_sdet-qa-aitesting-activity-7345460154588385281-OApe#:~:text=%23SDET%20%23QA%20%23AITesting%20%23LLM%20%23ChatGPT,%23QALife%20%23TechInnovation%20%23TestAutomation%20%23QualityEngineering%20%23SDETJourney&text=I'm%20passionate%20about%20leveraging%20AI,seamless%20digital%20experiences%20for%20users.
+        - generic [ref=e201]:
+          - generic [ref=e204]:
+            - link "The Most Practical Guide to LLM Evaluation (for Engineers, ... LinkedIn · Mohit Kumar 70+ reactions · 4 months ago" [ref=e206] [cursor=pointer]:
+              - /url: https://www.linkedin.com/posts/mohitksh_the-most-practical-guide-to-llm-evaluation-activity-7399687306070306816-tvc2
+              - heading "The Most Practical Guide to LLM Evaluation (for Engineers, ..." [level=3] [ref=e207]
+              - generic [ref=e212]:
+                - generic [ref=e214]: LinkedIn · Mohit Kumar
+                - generic [ref=e216]: 70+ reactions · 4 months ago
+            - button "About this result" [ref=e217] [cursor=pointer]:
+              - img [ref=e220]
+          - generic [ref=e224]:
+            - text: ...
+            - emphasis [ref=e225]: LLM
+            - text: evaluation is becoming the most critical step in
+            - emphasis [ref=e226]: AI
+            - text: development. ➡️ QA +
+            - emphasis [ref=e227]: SDET
+            - text: roles are evolving into
+            - emphasis [ref=e228]: AI
+            - text: Quality Engineers. ➡️ Every
+            - emphasis [ref=e229]: AI
+            - text: ...
+        - generic [ref=e233]:
+          - generic [ref=e236]:
+            - link "How I use LLMs in my QA workflow LinkedIn · Raghvendra Singh 1.2K+ reactions · 9 months ago" [ref=e238] [cursor=pointer]:
+              - /url: https://www.linkedin.com/posts/raghvendra-singh-718b72209_give-me-2-minutes-and-ill-show-you-how-i-activity-7342174468011634691-dHYh
+              - heading "How I use LLMs in my QA workflow" [level=3] [ref=e239]
+              - generic [ref=e244]:
+                - generic [ref=e246]: LinkedIn · Raghvendra Singh
+                - generic [ref=e248]: 1.2K+ reactions · 9 months ago
+            - button "About this result" [ref=e249] [cursor=pointer]:
+              - img [ref=e252]
+          - generic [ref=e255]:
+            - generic [ref=e256]:
+              - text: Eitan Peles. QA
+              - emphasis [ref=e257]: AI
+              - text: Agent Engineer | Playwright + LLMs | Building Autonomous Test Systems
+              - emphasis [ref=e258]: SDET
+              - text: ... Vibium -
+              - emphasis [ref=e259]: AI
+              - text: Native
+              - emphasis [ref=e260]: Test Automation
+              - text: Vibium is an ...
+            - link "Read more" [ref=e261] [cursor=pointer]:
+              - /url: https://www.linkedin.com/posts/raghvendra-singh-718b72209_give-me-2-minutes-and-ill-show-you-how-i-activity-7342174468011634691-dHYh#:~:text=Eitan%20Peles,%C2%B7%20TypeScript%20%7C%20Astrophysics%20enthusiast&text=Vibium%20%2D%20AI%20Native%20Test,Automation%20Vibium%20is%20an
+        - generic [ref=e265]:
+          - generic [ref=e268]:
+            - link "Why SDETs are not replaced by AI | Moemen E. posted on ... LinkedIn · Moemen E. 20+ reactions · 10 months ago" [ref=e270] [cursor=pointer]:
+              - /url: https://www.linkedin.com/posts/moemeneb_ai-testing-sdet-activity-7338869059968454656-jHiU
+              - heading "Why SDETs are not replaced by AI | Moemen E. posted on ..." [level=3] [ref=e271]
+              - generic [ref=e276]:
+                - generic [ref=e278]: LinkedIn · Moemen E.
+                - generic [ref=e280]: 20+ reactions · 10 months ago
+            - button "About this result" [ref=e281] [cursor=pointer]:
+              - img [ref=e284]
+          - generic [ref=e288]:
+            - text: As a lead
+            - emphasis [ref=e289]: SDET
+            - text: and MSc in leveraging the
+            - emphasis [ref=e290]: LLM
+            - text: in the software industry, I was asked many times during interviews or meetings, Will
+            - emphasis [ref=e291]: AI
+            - text: replace ...
+        - generic [ref=e295]:
+          - generic [ref=e298]:
+            - 'link "Google SDET Interview Prep: Must-Know Areas for ... LinkedIn · Sri Harish Chintha 30+ reactions · 3 weeks ago" [ref=e300] [cursor=pointer]':
+              - /url: https://www.linkedin.com/posts/sri-harish-chintha-074a5a2b1_sdet-testautomation-softwaretesting-activity-7441695417408417792-oP8F
+              - 'heading "Google SDET Interview Prep: Must-Know Areas for ..." [level=3] [ref=e301]'
+              - generic [ref=e306]:
+                - generic [ref=e308]: LinkedIn · Sri Harish Chintha
+                - generic [ref=e310]: 30+ reactions · 3 weeks ago
+            - button "About this result" [ref=e311] [cursor=pointer]:
+              - img [ref=e314]
+          - generic [ref=e317]:
+            - generic [ref=e318]:
+              - text: Google
+              - emphasis [ref=e319]: Test Automation
+              - text: (
+              - emphasis [ref=e320]: SDET
+              - text: ) Interview?s If ... Vishvas Dhengula. Lead
+              - emphasis [ref=e321]: SDET
+              - text: "|"
+              - emphasis [ref=e322]: AI
+              - text: Automation Author | Pioneer in Agentic Testing & Local
+              - emphasis [ref=e323]: LLM
+              - text: ...
+            - link "Read more" [ref=e324] [cursor=pointer]:
+              - /url: https://www.linkedin.com/posts/sri-harish-chintha-074a5a2b1_sdet-testautomation-softwaretesting-activity-7441695417408417792-oP8F#:~:text=Vishvas%20Dhengula,%7C%20Playwright%2C%20WebDriverIO%2C%20Cypress%20%7C
+        - generic [ref=e328]:
+          - generic [ref=e331]:
+            - 'link "LLM comparison: GPT-4o leads on test case quality LinkedIn · Lamhot Siagian 40+ reactions · 9 months ago" [ref=e333] [cursor=pointer]':
+              - /url: https://www.linkedin.com/posts/lamhotsiagian_ever-wondered-which-llm-is-actually-the-activity-7346972996089061376-PV_G
+              - 'heading "LLM comparison: GPT-4o leads on test case quality" [level=3] [ref=e334]'
+              - generic [ref=e339]:
+                - generic [ref=e341]: LinkedIn · Lamhot Siagian
+                - generic [ref=e343]: 40+ reactions · 9 months ago
+            - button "About this result" [ref=e344] [cursor=pointer]:
+              - img [ref=e347]
+          - generic [ref=e350]:
+            - generic [ref=e351]:
+              - text: ...
+              - emphasis [ref=e352]: summary
+              - text: ", cutting-edge GPT-4 variants dominate branch ..."
+              - emphasis [ref=e353]: AI
+              - text: "#"
+              - emphasis [ref=e354]: LLM
+              - text: "#ProductDevelopment #Product #ProductManagement #QA #Testing #TechFounders."
+            - link "Read more" [ref=e355] [cursor=pointer]:
+              - /url: https://www.linkedin.com/posts/lamhotsiagian_ever-wondered-which-llm-is-actually-the-activity-7346972996089061376-PV_G#:~:text=Check%20it%20out%20here%3A%20%F0%9F%94%97,%23Product%20%23ProductManagement%20%23QA%20%23Testing%20%23TechFounders
+        - generic [ref=e359]:
+          - generic [ref=e362]:
+            - 'link "LLM Code Generation and Testing: White-Box vs Black- ... LinkedIn · Carlos Arguelles 160+ reactions · 1 month ago" [ref=e364] [cursor=pointer]':
+              - /url: https://www.linkedin.com/posts/carlos-arguelles-6352392_today-we-had-an-interesting-debate-%F0%9D%90%92%F0%9D%90%A1%F0%9D%90%A8%F0%9D%90%AE%F0%9D%90%A5%F0%9D%90%9D-activity-7430258700776427520-4PUY
+              - 'heading "LLM Code Generation and Testing: White-Box vs Black- ..." [level=3] [ref=e365]'
+              - generic [ref=e370]:
+                - generic [ref=e372]: LinkedIn · Carlos Arguelles
+                - generic [ref=e374]: 160+ reactions · 1 month ago
+            - button "About this result" [ref=e375] [cursor=pointer]:
+              - img [ref=e378]
+          - generic [ref=e381]:
+            - generic [ref=e382]:
+              - text: It is becoming broader through Quality Engineering, deeper through
+              - emphasis [ref=e383]: SDET
+              - text: practices, and smarter through
+              - emphasis [ref=e384]: AI
+              - text: "! ..."
+              - emphasis [ref=e385]: Test Automation
+              - text: Architect | Cloud & ...
+            - link "Read more" [ref=e386] [cursor=pointer]:
+              - /url: https://www.linkedin.com/posts/carlos-arguelles-6352392_today-we-had-an-interesting-debate-%F0%9D%90%92%F0%9D%90%A1%F0%9D%90%A8%F0%9D%90%AE%F0%9D%90%A5%F0%9D%90%9D-activity-7430258700776427520-4PUY#:~:text=It%20is%20becoming%20broader%20through,practices%2C%20and%20smarter%20through%20AI!&text=Senior%20Software%20Engineer%20in%20Test,Quality%20Systems%20%7C%20Founder%2C%20Elementix
+        - generic [ref=e390]:
+          - generic [ref=e393]:
+            - link "Taking Test Automation Reporting to the Next Level with AI LinkedIn · Vikas Prasad 210+ reactions · 4 months ago" [ref=e395] [cursor=pointer]:
+              - /url: https://www.linkedin.com/posts/vikas-prasad-4a709a50_taking-test-automation-reporting-to-the-activity-7399785163129446402-qsxK
+              - heading "Taking Test Automation Reporting to the Next Level with AI" [level=3] [ref=e396]
+              - generic [ref=e401]:
+                - generic [ref=e403]: LinkedIn · Vikas Prasad
+                - generic [ref=e405]: 210+ reactions · 4 months ago
+            - button "About this result" [ref=e406] [cursor=pointer]:
+              - img [ref=e409]
+          - generic [ref=e412]:
+            - generic [ref=e413]:
+              - text: Suraj Rajendra Chirde. Principal
+              - emphasis [ref=e414]: SDET
+              - text: "|"
+              - emphasis [ref=e415]: Test Automation
+              - text: Strategy ... The smartest
+              - emphasis [ref=e416]: SDET
+              - text: engineers are integrating
+              - emphasis [ref=e417]: AI
+              - text: as a force multiplier—not a ...
+            - link "Read more" [ref=e418] [cursor=pointer]:
+              - /url: https://www.linkedin.com/posts/vikas-prasad-4a709a50_taking-test-automation-reporting-to-the-activity-7399785163129446402-qsxK#:~:text=Suraj%20Rajendra%20Chirde,SDET%20%7C%20Test%20Automation%20Strategy&text=The%20smartest%20SDET%20engineers%20are,a%20force%20multiplier%E2%80%94not%20a%20replacement.
+        - generic [ref=e422]:
+          - generic [ref=e425]:
+            - 'link "🌟 AI as a Co-Pilot for QA: Test Traditional Apps Faster & ... LinkedIn · Kavita J. 4 reactions · 8 months ago" [ref=e427] [cursor=pointer]':
+              - /url: https://www.linkedin.com/pulse/ai-co-pilot-qa-test-traditional-apps-faster-smarter-kavita-jadhav-zmy4c
+              - 'heading "🌟 AI as a Co-Pilot for QA: Test Traditional Apps Faster & ..." [level=3] [ref=e428]'
+              - generic [ref=e433]:
+                - generic [ref=e435]: LinkedIn · Kavita J.
+                - generic [ref=e437]: 4 reactions · 8 months ago
+            - button "About this result" [ref=e438] [cursor=pointer]:
+              - img [ref=e441]
+          - generic [ref=e444]:
+            - generic [ref=e445]:
+              - text: Kavita J.
+              - emphasis [ref=e446]: AI
+              - text: Developer|
+              - emphasis [ref=e447]: AI
+              - text: Test Architect | +
+              - emphasis [ref=e448]: LLM
+              - text: Assurance… ... Role of the
+              - emphasis [ref=e449]: SDET
+              - text: ": Validate"
+              - emphasis [ref=e450]: AI
+              - text: outputs, refine them, and ensure ...
+            - link "Read more" [ref=e451] [cursor=pointer]:
+              - /url: https://www.linkedin.com/pulse/ai-co-pilot-qa-test-traditional-apps-faster-smarter-kavita-jadhav-zmy4c#:~:text=Kavita%20J.,Architect%20%7C%20%2B%20LLM%20Assurance%E2%80%A6&text=Role%20of%20the%20SDET%3A%20Validate,suite%20is%20reliable%20and%20relevant.
+      - generic [ref=e453]:
+        - generic [ref=e458]:
+          - heading "People also search for" [level=2] [ref=e460]
+          - generic [ref=e462]:
+            - link "Sdet ai test automation summary llm github" [ref=e467] [cursor=pointer]:
+              - /url: /search?sca_esv=c191c92cef6168fa&q=Sdet+ai+test+automation+summary+llm+github&sa=X&ved=2ahUKEwjz9ZnZ_fGTAxVJEzQIHc5wC1cQ1QJ6BAgtEAE
+              - generic [ref=e468]:
+                - generic [ref=e473]: Sdet ai test automation summary llm github
+                - img [ref=e477]
+            - link "Sdet ai test automation summary llm interview" [ref=e483] [cursor=pointer]:
+              - /url: /search?sca_esv=c191c92cef6168fa&q=Sdet+ai+test+automation+summary+llm+interview&sa=X&ved=2ahUKEwjz9ZnZ_fGTAxVJEzQIHc5wC1cQ1QJ6BAgsEAE
+              - generic [ref=e484]:
+                - generic [ref=e489]: Sdet ai test automation summary llm interview
+                - img [ref=e493]
+        - navigation [ref=e495]:
+          - heading "Page Navigation" [level=1] [ref=e496]
+          - text: "1"
+          - link "Page 2" [ref=e499] [cursor=pointer]:
+            - /url: /search?q=site:linkedin.com+%22SDET%22+%22AI%22+%22test+automation%22+%22summary%22+%22LLM%22&sca_esv=c191c92cef6168fa&ei=r6HgabPiN8mm0PEPzuGtuAU&start=10&sa=N&sstk=Af77f_cKBy4fr7MZ2lINsHvMg_DFOB3bYn3WJUA7mfGLnlTuwVTvLWrfwWc6BkmV_HeGOYkShIzPK50nS4oCGGkEvtqPrIBMKinvzw&ved=2ahUKEwjz9ZnZ_fGTAxVJEzQIHc5wC1cQ8tMDegQIKhAE
+            - text: "2"
+          - link "Page 3" [ref=e501] [cursor=pointer]:
+            - /url: /search?q=site:linkedin.com+%22SDET%22+%22AI%22+%22test+automation%22+%22summary%22+%22LLM%22&sca_esv=c191c92cef6168fa&ei=r6HgabPiN8mm0PEPzuGtuAU&start=20&sa=N&sstk=Af77f_cKBy4fr7MZ2lINsHvMg_DFOB3bYn3WJUA7mfGLnlTuwVTvLWrfwWc6BkmV_HeGOYkShIzPK50nS4oCGGkEvtqPrIBMKinvzw&ved=2ahUKEwjz9ZnZ_fGTAxVJEzQIHc5wC1cQ8tMDegQIKhAG
+            - text: "3"
+          - link "Page 4" [ref=e503] [cursor=pointer]:
+            - /url: /search?q=site:linkedin.com+%22SDET%22+%22AI%22+%22test+automation%22+%22summary%22+%22LLM%22&sca_esv=c191c92cef6168fa&ei=r6HgabPiN8mm0PEPzuGtuAU&start=30&sa=N&sstk=Af77f_cKBy4fr7MZ2lINsHvMg_DFOB3bYn3WJUA7mfGLnlTuwVTvLWrfwWc6BkmV_HeGOYkShIzPK50nS4oCGGkEvtqPrIBMKinvzw&ved=2ahUKEwjz9ZnZ_fGTAxVJEzQIHc5wC1cQ8tMDegQIKhAI
+            - text: "4"
+          - link "Page 5" [ref=e505] [cursor=pointer]:
+            - /url: /search?q=site:linkedin.com+%22SDET%22+%22AI%22+%22test+automation%22+%22summary%22+%22LLM%22&sca_esv=c191c92cef6168fa&ei=r6HgabPiN8mm0PEPzuGtuAU&start=40&sa=N&sstk=Af77f_cKBy4fr7MZ2lINsHvMg_DFOB3bYn3WJUA7mfGLnlTuwVTvLWrfwWc6BkmV_HeGOYkShIzPK50nS4oCGGkEvtqPrIBMKinvzw&ved=2ahUKEwjz9ZnZ_fGTAxVJEzQIHc5wC1cQ8tMDegQIKhAK
+            - text: "5"
+          - link "Page 6" [ref=e507] [cursor=pointer]:
+            - /url: /search?q=site:linkedin.com+%22SDET%22+%22AI%22+%22test+automation%22+%22summary%22+%22LLM%22&sca_esv=c191c92cef6168fa&ei=r6HgabPiN8mm0PEPzuGtuAU&start=50&sa=N&sstk=Af77f_cKBy4fr7MZ2lINsHvMg_DFOB3bYn3WJUA7mfGLnlTuwVTvLWrfwWc6BkmV_HeGOYkShIzPK50nS4oCGGkEvtqPrIBMKinvzw&ved=2ahUKEwjz9ZnZ_fGTAxVJEzQIHc5wC1cQ8tMDegQIKhAM
+            - text: "6"
+          - link "Page 7" [ref=e509] [cursor=pointer]:
+            - /url: /search?q=site:linkedin.com+%22SDET%22+%22AI%22+%22test+automation%22+%22summary%22+%22LLM%22&sca_esv=c191c92cef6168fa&ei=r6HgabPiN8mm0PEPzuGtuAU&start=60&sa=N&sstk=Af77f_cKBy4fr7MZ2lINsHvMg_DFOB3bYn3WJUA7mfGLnlTuwVTvLWrfwWc6BkmV_HeGOYkShIzPK50nS4oCGGkEvtqPrIBMKinvzw&ved=2ahUKEwjz9ZnZ_fGTAxVJEzQIHc5wC1cQ8tMDegQIKhAO
+            - text: "7"
+          - link "Page 8" [ref=e511] [cursor=pointer]:
+            - /url: /search?q=site:linkedin.com+%22SDET%22+%22AI%22+%22test+automation%22+%22summary%22+%22LLM%22&sca_esv=c191c92cef6168fa&ei=r6HgabPiN8mm0PEPzuGtuAU&start=70&sa=N&sstk=Af77f_cKBy4fr7MZ2lINsHvMg_DFOB3bYn3WJUA7mfGLnlTuwVTvLWrfwWc6BkmV_HeGOYkShIzPK50nS4oCGGkEvtqPrIBMKinvzw&ved=2ahUKEwjz9ZnZ_fGTAxVJEzQIHc5wC1cQ8tMDegQIKhAQ
+            - text: "8"
+          - link "Page 9" [ref=e513] [cursor=pointer]:
+            - /url: /search?q=site:linkedin.com+%22SDET%22+%22AI%22+%22test+automation%22+%22summary%22+%22LLM%22&sca_esv=c191c92cef6168fa&ei=r6HgabPiN8mm0PEPzuGtuAU&start=80&sa=N&sstk=Af77f_cKBy4fr7MZ2lINsHvMg_DFOB3bYn3WJUA7mfGLnlTuwVTvLWrfwWc6BkmV_HeGOYkShIzPK50nS4oCGGkEvtqPrIBMKinvzw&ved=2ahUKEwjz9ZnZ_fGTAxVJEzQIHc5wC1cQ8tMDegQIKhAS
+            - text: "9"
+          - link "Page 10" [ref=e515] [cursor=pointer]:
+            - /url: /search?q=site:linkedin.com+%22SDET%22+%22AI%22+%22test+automation%22+%22summary%22+%22LLM%22&sca_esv=c191c92cef6168fa&ei=r6HgabPiN8mm0PEPzuGtuAU&start=90&sa=N&sstk=Af77f_cKBy4fr7MZ2lINsHvMg_DFOB3bYn3WJUA7mfGLnlTuwVTvLWrfwWc6BkmV_HeGOYkShIzPK50nS4oCGGkEvtqPrIBMKinvzw&ved=2ahUKEwjz9ZnZ_fGTAxVJEzQIHc5wC1cQ8tMDegQIKhAU
+            - text: "10"
+          - heading "Next" [level=2] [ref=e517]:
+            - link "Next" [ref=e518] [cursor=pointer]:
+              - /url: /search?q=site:linkedin.com+%22SDET%22+%22AI%22+%22test+automation%22+%22summary%22+%22LLM%22&sca_esv=c191c92cef6168fa&ei=r6HgabPiN8mm0PEPzuGtuAU&start=10&sa=N&sstk=Af77f_cKBy4fr7MZ2lINsHvMg_DFOB3bYn3WJUA7mfGLnlTuwVTvLWrfwWc6BkmV_HeGOYkShIzPK50nS4oCGGkEvtqPrIBMKinvzw&ved=2ahUKEwjz9ZnZ_fGTAxVJEzQIHc5wC1cQ8NMDegQIKhAW
+              - generic [ref=e520]: Next
+      - navigation
+    - contentinfo [ref=e521]:
+      - heading "Footer Links" [level=1] [ref=e522]
+      - generic [ref=e526]:
+        - generic [ref=e530]:
+          - button "Eastmont, Washington - From your IP address" [ref=e532] [cursor=pointer]:
+            - generic [ref=e533]: Eastmont, Washington
+            - generic [ref=e535]:
+              - text: "-"
+              - generic [ref=e536]: From your IP address
+          - text: "-"
+          - button "Update location" [ref=e538] [cursor=pointer]: Update location
+        - generic [ref=e541]:
+          - link "Help" [ref=e542] [cursor=pointer]:
+            - /url: https://support.google.com/websearch/?p=ws_results_help&hl=en&fg=1
+          - link "Send feedback" [ref=e543] [cursor=pointer]:
+            - /url: "#"
+          - link "Privacy" [ref=e544] [cursor=pointer]:
+            - /url: https://policies.google.com/privacy?hl=en&fg=1
+          - link "Terms" [ref=e545] [cursor=pointer]:
+            - /url: https://policies.google.com/terms?hl=en&fg=1
