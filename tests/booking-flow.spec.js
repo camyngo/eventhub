@@ -1,5 +1,6 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
+const { ai } = require('@zerostep/playwright');
 
 const USER_EMAIL = 'rahulshetty1@gmail.com';
 const USER_PASSWORD = 'Magiclife1!';
@@ -54,9 +55,9 @@ test.describe('Booking Flow', () => {
     await expect(page).toHaveURL(/\/events\/\d+/);
 
     // -- Step 4: Capture price per ticket (needed for BR-9 assertion) --
-    // CSS class used — no semantic/role/label selector available for this price display.
+    // ZeroStep used here — no stable selector exists for this price display.
     // Missing data-testid: developers should add data-testid="price-per-ticket" here.
-    const priceText = await page.locator('span.text-2xl.font-bold.text-indigo-700').innerText();
+    const priceText = await ai('What is the price per ticket? Return only the price text including the dollar sign and any commas, e.g. "$300" or "$1,200"', { page, test });
     const rawPrice = parseFloat(priceText.replace(/[$,]/g, ''));
     console.log(`Price per ticket: ${priceText} (raw: ${rawPrice})`);
 
@@ -79,9 +80,8 @@ test.describe('Booking Flow', () => {
     await expect(page.getByText('Booking Confirmed!')).toBeVisible();
 
     // -- Step 9: Assert booking ref visible and matches [A-Z]-[A-Z0-9]{6} (BR-7) --
-    const bookingRefEl = page.locator('.booking-ref');
-    await expect(bookingRefEl).toBeVisible();
-    const bookingRef = await bookingRefEl.innerText();
+    // ZeroStep used here — .booking-ref is a CSS class with no data-testid equivalent.
+    const bookingRef = await ai('What is the booking reference shown in the confirmation? Return only the reference code, e.g. "D-ABC123"', { page, test });
     expect(bookingRef).toMatch(/^[A-Z]-[A-Z0-9]{6}$/);
 
     // -- Step 10: Assert first char of ref = first char of event title (BR-7) --
@@ -164,11 +164,9 @@ test.describe('Booking Flow', () => {
     console.log(`Detail page title: "${eventTitle}"`);
 
     // -- Step 5: Assert booking ref visible and correctly formatted (BR-7) --
-    // Selector note: ui-selectors.md says span.font-mono.font-bold;
-    // actual class in DOM is "text-gray-900 font-mono" — using span.font-mono.
-    const bookingRefEl = page.locator('span.font-mono').first();
-    await expect(bookingRefEl).toBeVisible();
-    const bookingRef = await bookingRefEl.innerText();
+    // ZeroStep used here — ui-selectors.md says span.font-mono.font-bold but actual DOM
+    // class is "text-gray-900 font-mono" and no data-testid exists for this element.
+    const bookingRef = await ai('What is the booking reference number shown on this page? Return only the reference code, e.g. "D-ABC123"', { page, test });
     expect(bookingRef).toMatch(/^[A-Z]-[A-Z0-9]{6}$/);
     console.log(`Booking ref on detail page: "${bookingRef}"`);
 
