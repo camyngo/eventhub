@@ -1,10 +1,10 @@
 # EventHub — Booking Management Test Strategy
 
 > **Scope**: Booking Management (create, view, cancel, clear, refund eligibility)
-> **Generated**: 2026-04-24
+> **Generated**: 2026-04-24 | **Updated**: 2026-04-25 (ZeroStep integration)
 > **Input**: `docs/test-scenarios.md`
 > **Consumed by**: `/generate-tests`
-> **Note**: `playwright-best-practices` skill not found in `.claude/skills/` — E2E decisions made from decision rules + domain knowledge only. Backend and frontend source do not exist yet (early setup); source file references are expected paths, not discovered.
+> **Note**: Backend and frontend source do not exist yet (early setup); source file references are expected paths, not discovered.
 
 ---
 
@@ -158,8 +158,6 @@ Isolated UI component tests — no backend, no routing, no authentication. Mount
 
 ### E2E (14 tests)
 
-> **Note**: `playwright-best-practices` skill not found in `.claude/skills/`. These decisions are based on decision rules and domain knowledge — review against Playwright standards before generating.
-
 Only tests requiring a real browser + live backend + authenticated session. Multi-page navigation, full-stack state changes, and browser-native behavior (timing, animation, interactive state) belong here.
 
 #### Critical Booking Flows — P0 (6)
@@ -269,27 +267,71 @@ The 4-second delay is a live `setTimeout`. While `isRefundEligible(quantity)` is
 
 ---
 
+## ZeroStep AI Selector Integration
+
+ZeroStep (`@zerostep/playwright`) is integrated into the E2E suite as a **targeted fallback** for elements that have no stable `data-testid`, accessibility role, or label selector. It uses AI to read the rendered page visually and extract the value, making tests resilient to CSS class renames and Tailwind restyling.
+
+### Where it's used (as of 2026-04-25)
+
+| Test | Step | Selector replaced | Why ZeroStep |
+|------|------|------------------|--------------|
+| TC-001 | Step 4 — price per ticket | `span.text-2xl.font-bold.text-indigo-700` | Multi-class Tailwind utility chain — breaks on any styling change |
+| TC-001 | Step 9 — booking ref (confirmation) | `.booking-ref` | CSS class only; no `data-testid` on confirmation card |
+| TC-003 | Step 5 — booking ref (detail page) | `span.font-mono` | `ui-selectors.md` had `span.font-mono.font-bold` but actual DOM class is `text-gray-900 font-mono`; no `data-testid` |
+
+### Usage pattern
+
+```javascript
+const { ai } = require('@zerostep/playwright');
+
+// Query — returns the extracted string value
+const priceText = await ai(
+  'What is the price per ticket? Return only the price text including the dollar sign, e.g. "$300"',
+  { page, test }
+);
+```
+
+### Token setup
+
+ZeroStep requires a token from [app.zerostep.com](https://app.zerostep.com). Add it to `zerostep.config.json` (gitignored) or export `ZEROSTEP_TOKEN` as an environment variable.
+
+### Exit criteria — when to remove ZeroStep
+
+ZeroStep fallbacks should be replaced with stable selectors once developers add the following `data-testid` attributes:
+
+| `data-testid` to add | Element | Replaces |
+|----------------------|---------|---------|
+| `price-per-ticket` | Price `<span>` on event detail/booking page | TC-001 Step 4 ZeroStep call |
+| `booking-ref` | Booking reference on confirmation card | TC-001 Step 9 ZeroStep call |
+| `booking-ref` | Booking reference on detail page | TC-003 Step 5 ZeroStep call |
+
+---
+
 ## Anti-Patterns Found
 
-> **No existing tests found** (`tests/` directory does not exist). The following are **pre-emptive warnings** — patterns to avoid when writing tests from scratch.
+> **Status**: `tests/booking-flow.spec.js` implements TC-001, TC-002, TC-003. All 3 pass. The following patterns were actively found and fixed during test generation.
 
 ### 1. Don't test pure field validators at API (now fixed)
 
 TC-302–306 and TC-408 were all at API in the original pass. These are pure functions. Testing `validateCustomerEmail("bad")` through HTTP adds 200–300ms latency and couples the test to the HTTP layer, which is not what's being tested. **Fix applied**: moved to Unit; one wired API test retained.
 
-### 2. Don't test single-component UI state at E2E (now fixed)
+### 2. Don't use CSS class chains as selectors (now mitigated with ZeroStep)
+
+Multi-class Tailwind selectors like `span.text-2xl.font-bold.text-indigo-700` break on any styling change. Where no `data-testid` or role exists, ZeroStep's `ai()` is the correct fallback — it reads the page visually and is immune to CSS changes. **Permanent fix**: developers should add `data-testid` attributes to remove the ZeroStep dependency entirely (see Exit Criteria in ZeroStep section above).
+
+### 4. Don't test single-component UI state at E2E (now fixed)
 
 TC-310, TC-500, TC-501, TC-502, TC-505, TC-506 were all at E2E. These are component rendering checks. **Fix applied**: moved to Component.
 
-### 3. Don't test HTTP status codes at E2E
+### 5. Don't test HTTP status codes at E2E
 
 TC-201–205 (403, 401) belong at API. Never write an E2E test that asserts an HTTP status code — assert the resulting UI state (TC-200 "Access Denied" message) instead.
 
-### 4. Don't test FIFO pruning exclusively via E2E
+### 6. Don't test FIFO pruning exclusively via E2E
 
 The deletion logic is a backend service rule. E2E requires creating 9 bookings through the UI — slow, flaky setup. API tests with direct HTTP calls are the primary layer; E2E is supplementary only.
 
-### 5. Don't add an API test for refund eligibility
+### 7. Don't add an API test for refund eligibility
 
 BR-8 (refund eligibility) has no backend endpoint. Unit covers the logic; E2E covers the UX. A spurious API test would either test nothing or create a false dependency on a non-existent route.
 
