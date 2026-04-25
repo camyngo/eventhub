@@ -15,7 +15,7 @@ This document defines the testing standards, patterns, and best practices for wr
 
 ### Config Reference
 - **Test directory**: `./tests`
-- **Base URL**: `http://localhost:3000`
+- **Base URL**: `https://eventhub.rahulshettyacademy.com`
 - **Timeout**: 30s per test, 5s per assertion
 - **Browser**: Chromium only (Desktop Chrome)
 - **Parallel execution**: Disabled (`fullyParallel: false`)
@@ -150,11 +150,13 @@ const USER_PASSWORD = 'Magiclife1!';
 
 // Reusable helpers
 async function login(page) {
-  await page.goto(`${BASE_URL}/login`);
+  await page.goto('/login');
   await page.getByPlaceholder('you@email.com').fill(USER_EMAIL);
   await page.getByLabel('Password').fill(USER_PASSWORD);
-  await page.locator('#login-btn').click();
-  await expect(page.getByRole('link', { name: 'Browse Events ->' })).toBeVisible();
+  await page.getByRole('button', { name: 'Sign In' }).click(); // #login-btn does not exist in DOM
+  await expect(
+    page.getByRole('navigation').getByRole('link', { name: 'My Bookings' })
+  ).toBeVisible(); // scoped to nav — present on every authenticated page
 }
 
 test('descriptive test name that explains what is validated', async ({ page }) => {
@@ -198,17 +200,20 @@ class LoginPage {
     this.page = page;
     this.emailInput = page.getByPlaceholder('you@email.com');
     this.passwordInput = page.getByLabel('Password');
-    this.loginBtn = page.locator('#login-btn');
+    this.loginBtn = page.getByRole('button', { name: 'Sign In' }); // #login-btn does not exist in DOM
   }
 
   async goto() {
-    await this.page.goto(`${BASE_URL}/login`);
+    await this.page.goto('/login');
   }
 
   async login(email, password) {
     await this.emailInput.fill(email);
     await this.passwordInput.fill(password);
     await this.loginBtn.click();
+    await expect(
+      this.page.getByRole('navigation').getByRole('link', { name: 'My Bookings' })
+    ).toBeVisible();
   }
 }
 ```

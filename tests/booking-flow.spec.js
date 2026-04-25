@@ -44,10 +44,12 @@ test.describe('Booking Flow', () => {
     await login(page);
 
     // -- Step 2: Navigate to events, capture first event card title --
+    // ZeroStep used here — getByRole('link').first() inside a card is ambiguous (could be
+    // image link, wrapper, or title). Dev should add data-testid="event-title" on title element.
     await page.goto('/events');
     const firstCard = page.getByTestId('event-card').first();
     await expect(firstCard).toBeVisible();
-    const eventTitle = await firstCard.getByRole('link').first().innerText();
+    const eventTitle = await ai('What is the title of the first event card on the page? Return only the event name text', { page, test });
     console.log(`Booking event: "${eventTitle}"`);
 
     // -- Step 3: Click Book Now on the first event card --
@@ -114,22 +116,24 @@ test.describe('Booking Flow', () => {
     await page.goto('/bookings');
 
     // -- Step 3: Assert at least one booking card is visible (BR-2) --
+    // Playwright locator used for count — ZeroStep is not suited for numeric counting.
+    // #booking-card is a non-unique ID (invalid HTML); dev should add data-testid="booking-card".
     const bookingCards = page.locator('#booking-card');
-    await expect(bookingCards.first()).toBeVisible();
+    await expect(bookingCards.first()).toBeVisible(); // auto-waits for page to load
     const count = await bookingCards.count();
     expect(count).toBeGreaterThan(0);
     console.log(`Booking cards visible: ${count}`);
 
-    // -- Step 4: Assert cards include status "confirmed" --
-    await expect(bookingCards.first()).toContainText('confirmed');
+    // -- Step 4: Assert first card shows "confirmed" status --
+    // ZeroStep used here — no data-testid or role to scope assertion to first card content.
+    const isConfirmed = await ai('Does the first booking card show the status "confirmed"?', { page, test });
+    expect(isConfirmed).toBeTruthy();
 
     // -- Step 5: Assert "View Details" link is present on the first card --
-    await expect(
-      bookingCards.first().getByRole('link', { name: 'View Details' })
-    ).toBeVisible();
+    const hasViewDetails = await ai('Is there a "View Details" link visible in the first booking card?', { page, test });
+    expect(hasViewDetails).toBeTruthy();
 
     // -- Step 6: Assert "Clear all bookings" button is visible at top (BR-4) --
-    // Selector note: ui-selectors.md describes this as a "link" but the element is a <button>.
     await expect(
       page.getByRole('button', { name: 'Clear all bookings' })
     ).toBeVisible();
@@ -148,18 +152,19 @@ test.describe('Booking Flow', () => {
     await login(page);
 
     // -- Step 2: Navigate to bookings, click View Details on first card --
+    // getByRole used — "View Details" has a clear accessible role; no ZeroStep needed here.
+    // .first() is safe: all "View Details" links are equivalent; any will reach a /bookings/:id page.
     await page.goto('/bookings');
-    const firstCard = page.locator('#booking-card').first();
-    await expect(firstCard).toBeVisible();
-    await firstCard.getByRole('link', { name: 'View Details' }).click();
+    await expect(page.getByRole('link', { name: 'View Details' }).first()).toBeVisible();
+    await page.getByRole('link', { name: 'View Details' }).first().click();
 
     // -- Step 3: Assert URL changed to /bookings/:id --
     await expect(page).toHaveURL(/\/bookings\/\d+/);
 
-    // -- Step 4: Assert event title displayed in h1 (BR-1) --
-    const titleEl = page.locator('h1');
-    await expect(titleEl).toBeVisible();
-    const eventTitle = await titleEl.innerText();
+    // -- Step 4: Assert event title displayed as main heading (BR-1) --
+    // ZeroStep used here — page.locator('h1') is too generic; no data-testid on the heading.
+    // Dev should add data-testid="event-title-heading".
+    const eventTitle = await ai('What is the event title shown as the main heading on this page? Return only the title text', { page, test });
     expect(eventTitle.trim().length).toBeGreaterThan(0);
     console.log(`Detail page title: "${eventTitle}"`);
 
