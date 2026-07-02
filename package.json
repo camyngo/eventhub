@@ -4,7 +4,8 @@
   "description": "EventHub E2E test suite",
   "scripts": {
     "test": "npx playwright test",
-    "test:report": "npx playwright show-report"
+    "test:report": "npx playwright show-report",
+    "predict:worldcup": "node analysis/world-cup-2026/predict.js"
   },
   "devDependencies": {
     "@playwright/test": "^1.59.1",
